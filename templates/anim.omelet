@@ -1,7 +1,0 @@
-@div.anim-circle
-    @div.anim.anim1
-        >for i in 1..12
-            @div.ball
-    @div.anim.anim2
-        >for i in 1..12
-            @div.ball

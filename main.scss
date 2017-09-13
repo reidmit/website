@@ -1,0 +1,87 @@
+$dark-blue: rgb(0, 40, 50);
+$light: rgb(240, 240, 240);
+$dark: rgb(10, 10, 10);
+$shadow-color: rgb(50, 50, 80);
+
+$unit: 8px;
+$unit2: $unit * 2;
+$unit3: $unit * 3;
+$max-width: 960px;
+$shadow: 0px 2px 10px -1px #666;
+
+body {
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    background-color: $dark-blue;
+    background-image: url('static/pixer-blue-green.png');
+    margin: 0;
+    padding: $unit3;
+    box-sizing: border-box;
+    color: $dark;
+}
+
+header {
+    background-color: $light;
+    margin: $unit auto;
+    font-size: 24px;
+    max-width: $max-width;
+    font-weight: normal;
+    box-shadow: $shadow;
+    display: flex;
+
+    div {
+        flex: 1;
+        display: inline-block;
+    }
+
+    .name {
+        margin: $unit2;
+        font-weight: 200;
+    }
+
+    nav {
+        height: 100%;
+        font-size: 20px;
+        line-height: 33px;
+
+        a {
+            padding: $unit2;
+            text-decoration: none;
+            color: $dark;
+            display: inline-block;
+            flex: 1;
+
+            &:hover, &:focus {
+                background: $dark-blue;
+                color: $light;
+            }
+        }
+    }
+}
+
+main {
+    background-color: $light;
+    margin: $unit3 auto;
+    max-width: $max-width;
+    box-shadow: $shadow;
+
+    section {
+        h1.section-title {
+            margin: 0;
+            padding: $unit $unit2;
+            background: $dark-blue;
+            color: $light;
+            font-weight: lighter;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .section-content {
+            padding: $unit2;
+
+        }
+    }
+}
+
+p {
+    color: green;
+}

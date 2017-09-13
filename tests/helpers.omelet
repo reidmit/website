@@ -1,1 +1,0 @@
-+link_to url text = @a[href={url}] {text}

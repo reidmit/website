@@ -1,0 +1,55 @@
+body {
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+  background-color: #002832;
+  background-image: url("static/pixer-blue-green.png");
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  color: #0a0a0a; }
+
+header {
+  background-color: #f0f0f0;
+  margin: 8px auto;
+  font-size: 24px;
+  max-width: 960px;
+  font-weight: normal;
+  box-shadow: 0px 2px 10px -1px #666;
+  display: flex; }
+  header div {
+    flex: 1;
+    display: inline-block; }
+  header .name {
+    margin: 16px;
+    font-weight: 200; }
+  header nav {
+    height: 100%;
+    font-size: 20px;
+    line-height: 33px; }
+    header nav a {
+      padding: 16px;
+      text-decoration: none;
+      color: #0a0a0a;
+      display: inline-block;
+      flex: 1; }
+      header nav a:hover, header nav a:focus {
+        background: #002832;
+        color: #f0f0f0; }
+
+main {
+  background-color: #f0f0f0;
+  margin: 24px auto;
+  max-width: 960px;
+  box-shadow: 0px 2px 10px -1px #666; }
+  main section h1.section-title {
+    margin: 0;
+    padding: 8px 16px;
+    background: #002832;
+    color: #f0f0f0;
+    font-weight: lighter;
+    font-size: 12px;
+    letter-spacing: 2px; }
+  main section .section-content {
+    padding: 16px; }
+
+p {
+  color: green; }
