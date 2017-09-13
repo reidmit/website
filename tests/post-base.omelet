@@ -1,0 +1,6 @@
+>extend base
+
++main-content =
+    @h1 {title}
+    {date}
+    {~content}

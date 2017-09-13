@@ -1,0 +1,16 @@
+@doctype html
+
+@html
+    @head
+        @title reid mitchell | {page-title}
+        @meta[charset="UTF-8"]
+        @meta[name="description" content="Personal website of software engineer, web developer, filmmaker & human Reid Mitchell"]
+        @meta[name="keywords" content="web,development,programming,blog,software,code,film,video"]
+        @meta[name="author" content="Reid Mitchell"]
+        @meta[name="viewport" content="width=device-width, initial-scale=1"]
+        @link[rel="stylesheet" href="assets/main.css"]
+        @link[rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Radley:400,400italic|Open+Sans:400,300']
+
+    @body
+        @div.content
+            {~page-content}

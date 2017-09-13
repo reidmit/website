@@ -1,0 +1,20 @@
+>extend base
+
+>import helpers as h
+
++main-content =
+    @p
+        Hi, I'm Reid. I'm passionate about writing code, designing websites, and making
+        movies &mdash; and teaching others about all of those things. I have learned so much
+        from online blogs and tutorials over the years that I feel it is only right to
+        try to give something back to the internet community. So I hope that you find
+        something on here that's helpful, or at least interesting.
+    @p
+        Some background about me: I'm currently working as a software engineer and
+        living in Seattle, WA. In 2016, I graduated from Pomona College in
+        Claremont, CA, where I majored in computer science and media studies. Before college,
+        I grew up in the suburbs of New York, a few miles north of New York City.
+    @p
+        If you want to get in touch (for any reason!), you can
+        {~h.link_to "mailto:reidmitchell1@gmail.com" "send me an email"}. You can also find
+        me on {~h.link_to "#" "GitHub"}, {~h.link_to "#" "LinkedIn"}, or {~h.link_to "#" "Facebook"}.

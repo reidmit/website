@@ -1,0 +1,17 @@
+>extend base
+
++ page-title = about me
+
++ page-content =
+    :markdown
+        # a test of markdown
+
+        this is a test of markdown
+        let's see how it goes
+        hello, world!
+
+        a list of items:
+
+        1. hello
+        2. item 2
+        3. item 3

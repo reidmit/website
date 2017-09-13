@@ -1,0 +1,20 @@
+>extend base
+
++ page-title = home
+
++ page-content =
+    @div.name
+        reid mitchell
+
+    @div.info
+        I like writing code, designing websites, and making movies.
+
+    >include templates/anim
+
+    ## LOOK AT THIS, IT IS SUPER WEIRD...
+
+    ## the >extend takes a path relative to this file (expected)
+
+    ## but the >include takes a path relative to the "node make.js" command
+
+    ## and neither works in the other way
