@@ -2,17 +2,17 @@ $dark-blue: rgb(0, 40, 50);
 $light: rgb(240, 240, 240);
 $dark: rgb(10, 10, 10);
 $shadow-color: rgb(50, 50, 80);
+$gray: rgb(210, 210, 210);
 
 $unit: 8px;
 $unit2: $unit * 2;
 $unit3: $unit * 3;
 $max-width: 960px;
-$shadow: 0px 2px 10px -1px #666;
+$shadow: 0px 2px 4px -1px #666;
 
 body {
     font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
-    background-color: $dark-blue;
-    background-image: url('static/pixer-blue-green.png');
+    background-color: $gray;
     margin: 0;
     padding: $unit3;
     box-sizing: border-box;
@@ -36,6 +36,11 @@ header {
     .name {
         margin: $unit2;
         font-weight: 200;
+
+        a {
+            text-decoration: none;
+            color: $dark;
+        }
     }
 
     nav {
@@ -65,23 +70,35 @@ main {
     box-shadow: $shadow;
 
     section {
-        h1.section-title {
-            margin: 0;
-            padding: $unit $unit2;
-            background: $dark-blue;
-            color: $light;
-            font-weight: lighter;
-            font-size: 12px;
-            letter-spacing: 2px;
+        .section-title {
+            background-image: url('static/bg-pixers-3.png');
+
+            h1 {
+                margin: 0;
+                display: inline-block;
+                padding: $unit $unit2;
+                background-color: rgba($dark-blue, .5);
+                color: $light;
+                font-weight: lighter;
+                font-size: 12px;
+                letter-spacing: 2px;
+                position: relative;
+
+                &:after {
+                    content: ' ';
+                    display: block;
+                    background: red;
+                    width: 16px;
+                    height: inherit;
+                    position: relative;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
         }
 
         .section-content {
             padding: $unit2;
-
         }
     }
-}
-
-p {
-    color: green;
 }

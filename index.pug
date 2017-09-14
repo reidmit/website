@@ -1,16 +1,23 @@
 html
     head
         title Hello, world
+        meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,700')
         link(rel='stylesheet', href='main.css')
     body
         header
-            .name reid mitchell
+            .name: a(href='/') reid mitchell
             nav
                 a.nav-link(href='#') about
                 a.nav-link(href='#') contact
         main
             section
-                h1.section-title Section title
-                .section-content.
-                    This is the section content
+                .section-title: h1 section title
+                .section-content
+                    p This is the section content
+                    p This is the section content
+                    p This is the section content
+                    p This is the section content
+
+        footer.
+            &copy; 2017 Reid Mitchell
