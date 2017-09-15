@@ -2,13 +2,21 @@ $dark-blue: rgb(0, 40, 50);
 $light: rgb(240, 240, 240);
 $dark: rgb(10, 10, 10);
 $shadow-color: rgb(50, 50, 80);
-$gray: rgb(210, 210, 210);
+$gray: rgb(205, 205, 210);
 
 $unit: 8px;
 $unit2: $unit * 2;
 $unit3: $unit * 3;
 $max-width: 960px;
 $shadow: 0px 2px 4px -1px #666;
+
+$small-breakpoint: 600px;
+
+@mixin box {
+    background-color: $light;
+    max-width: $max-width;
+    box-shadow: $shadow;
+}
 
 body {
     font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
@@ -20,12 +28,10 @@ body {
 }
 
 header {
-    background-color: $light;
+    @include box;
     margin: $unit auto;
     font-size: 24px;
-    max-width: $max-width;
     font-weight: normal;
-    box-shadow: $shadow;
     display: flex;
 
     div {
@@ -61,39 +67,61 @@ header {
             }
         }
     }
+
+    @media all and (max-width: $small-breakpoint) {
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+            text-align: center;
+            margin: $unit 0 0 0;
+        }
+
+        nav {
+            text-align: center;
+            font-size: 14px;
+            line-height: 24px;
+
+            a {
+                padding: $unit;
+
+                &:hover, &:focus {
+                    background: initial;
+                    color: initial;
+                }
+            }
+
+            a + a {
+                margin-left: $unit3;
+            }
+        }
+    }
 }
 
 main {
-    background-color: $light;
     margin: $unit3 auto;
-    max-width: $max-width;
-    box-shadow: $shadow;
 
     section {
+        @include box;
+        margin: $unit3 auto;
+
         .section-title {
             background-image: url('static/bg-pixers-3.png');
+            background-attachment: fixed;
+            height: $unit * 8;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
 
-            h1 {
-                margin: 0;
-                display: inline-block;
+            span {
+                margin: 0 0 0 $unit2;
                 padding: $unit $unit2;
-                background-color: rgba($dark-blue, .5);
+                background-color: rgba($dark-blue, 1);
                 color: $light;
+                font-size: 10px;
                 font-weight: lighter;
-                font-size: 12px;
-                letter-spacing: 2px;
-                position: relative;
-
-                &:after {
-                    content: ' ';
-                    display: block;
-                    background: red;
-                    width: 16px;
-                    height: inherit;
-                    position: relative;
-                    top: 0;
-                    bottom: 0;
-                }
+                letter-spacing: 3px;
+                align-self: flex-start;
             }
         }
 

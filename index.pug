@@ -4,20 +4,24 @@ html
         meta(name='viewport', content='width=device-width, initial-scale=1')
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,700')
         link(rel='stylesheet', href='main.css')
+        link(rel='stylesheet', href='static/fa-4.7/css/font-awesome.min.css')
     body
         header
             .name: a(href='/') reid mitchell
             nav
+                a.nav-link(href='#') posts
+                a.nav-link(href='#') projects
                 a.nav-link(href='#') about
-                a.nav-link(href='#') contact
         main
-            section
-                .section-title: h1 section title
-                .section-content
-                    p This is the section content
-                    p This is the section content
-                    p This is the section content
-                    p This is the section content
+            each i in [1,2,3,4,5]
+                section
+                    .section-title: span December 23, 1993
+                    .section-content
+                        p This is the section content
+                        p This is the section content
+                        p This is the section content
+                        p This is the section content
 
-        footer.
-            &copy; 2017 Reid Mitchell
+        footer
+           span.fa.fa-github.fa-lg
+           a(href='#') View this site on GitHub
