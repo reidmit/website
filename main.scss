@@ -105,7 +105,7 @@ main {
         @include box;
         margin: $unit3 auto;
 
-        .section-title {
+        .section-banner {
             background-image: url('static/bg-pixers-3.png');
             background-attachment: fixed;
             height: $unit * 8;
@@ -130,3 +130,60 @@ main {
         }
     }
 }
+
+.post {
+    h1 {
+        margin-top: $unit;
+    }
+}
+
+// BEGIN: Syntax highlighting
+
+pre {
+    background: $dark-blue;
+    color: $light;
+    font-size: 14px;
+    line-height: 20px;
+    padding: $unit2;
+    margin-left: -$unit2;
+    margin-right: -$unit2;
+
+    code[class^='language-'] {
+        .hljs-subst {
+            color: $light;
+        }
+
+        .hljs-keyword,
+        .hljs-name,
+        .hljs-selector-tag {
+            color: rgb(220, 80, 80);
+        }
+
+        .hljs-attribute,
+        .hljs-attr,
+        .hljs-selector-attr {
+            color: rgb(80, 220, 220);
+        }
+
+        .hljs-string,
+        .hljs-selector-class,
+        .hljs-selector-id {
+            color: rgb(220, 220, 0);
+        }
+
+        .hljs-literal,
+        .hljs-number {
+            color: rgb(255, 100, 200);
+        }
+
+        .hljs-regexp {
+            color: rgb(250, 200, 100);
+        }
+
+        .hljs-comment {
+            color: rgb(200, 200, 200);
+        }
+    }
+}
+
+// END: Syntax highlighting

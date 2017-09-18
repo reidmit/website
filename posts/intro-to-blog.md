@@ -1,5 +1,5 @@
 ---
-title: Hello, world!
+title: Testing 1 2 3
 date: September 14, 2017
 categories:
     - dog
@@ -11,7 +11,7 @@ categories:
 
 this is a paragraph...
 
-```
+```js
 function f() {
     return 47 + 'lol';
 }

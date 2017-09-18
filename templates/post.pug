@@ -1,4 +1,7 @@
 extends base.pug
 
 block main
-    | !{postContent}
+    section.post
+        .section-banner: span= date
+        .section-content
+            | !{body}
