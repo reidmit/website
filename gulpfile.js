@@ -15,18 +15,32 @@ const browserSync = require('browser-sync').create();
 
 const outputDir = './docs';
 const tempDir = './temp';
-
-const renderMarkdown = input => markdown({
-    highlight: (str, lang) => {
-        if (lang && hljs.getLanguage(lang)) {
-            try {
-                return hljs.highlight(lang, str).value;
-            } catch (_) {}
+const config = {
+    outputDir,
+    tempDir,
+    postsTempDir: tempDir + '/posts',
+    postsOutputDir: outputDir + '/posts',
+    pugOptions: {
+        doctype: 'html',
+        pretty: true,
+    },
+    browserSyncOptions: {
+        server: {
+            baseDir: outputDir
         }
+    },
+    markdownOptions: {
+        highlight: (str, lang) => {
+            if (lang && hljs.getLanguage(lang)) {
+                try {
+                    return hljs.highlight(lang, str).value;
+                } catch (_) {}
+            }
 
-        return '';
+            return '';
+        }
     }
-}).render(input);
+}
 
 gulp.task('build-scss', () => {
     return gulp.src('*.scss')
@@ -38,29 +52,25 @@ gulp.task('build-pages', () => {
     return gulp.src('*.pug')
         .pipe(plumber())
         .pipe(data(() => {
-            const d = {
-                posts: []
-            };
-            fs.readdirSync(tempDir + '/posts').forEach(file => {
-                d.posts.push(require(tempDir + '/posts/' + file));
+            const d = { posts: [] };
+            fs.readdirSync(config.postsTempDir).forEach(file => {
+                d.posts.push(require(config.postsTempDir + '/' + file));
             });
             return d;
         }))
-        .pipe(pug({
-            doctype: 'html',
-            pretty: true,
-        }))
+        .pipe(pug(config.pugOptions))
         .pipe(gulp.dest(outputDir));
 });
 
 gulp.task('posts:markdown-to-json', () => {
     return gulp.src('posts/*.md')
-        .pipe(markdownToJson(renderMarkdown))
-        .pipe(gulp.dest(tempDir + '/posts'));
+        .pipe(markdownToJson((input) =>
+            markdown(config.markdownOptions).render(input)))
+        .pipe(gulp.dest(config.postsTempDir));
 });
 
 gulp.task('posts:json-to-html', ['posts:markdown-to-json'], () => {
-    return gulp.src(tempDir + '/posts/*.json')
+    return gulp.src(config.postsTempDir + '/*.json')
         .pipe(foreach((stream, file) => {
             return gulp.src('templates/post.pug')
                 .pipe(data(() => require(file.path)))
@@ -68,11 +78,8 @@ gulp.task('posts:json-to-html', ['posts:markdown-to-json'], () => {
                     basename: path.basename(file.path, '.json'),
                     extension: 'html',
                 }))
-                .pipe(pug({
-                    doctype: 'html',
-                    pretty: true,
-                }))
-                .pipe(gulp.dest(outputDir + '/posts'));
+                .pipe(pug(config.pugOptions))
+                .pipe(gulp.dest(config.postsOutputDir));
         }));
 });
 
@@ -96,11 +103,7 @@ gulp.task('clean', () => del([
 ]));
 
 gulp.task('browser-sync', () => {
-    browserSync.init({
-        server: {
-            baseDir: outputDir
-        }
-    });
+    browserSync.init(config.browserSyncOptions);
 });
 
 gulp.task('default', ['build', 'browser-sync'], () => {
