@@ -1,5 +1,5 @@
 ---
-title: Hello, world!
+title: Hello, world! :)
 date: December 23, 1993
 categories:
     - dog
@@ -7,7 +7,7 @@ categories:
     - lol
 ---
 
-# hello, world
+# hello, world :)
 
 this is a paragraph...
 

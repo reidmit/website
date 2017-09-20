@@ -42,6 +42,10 @@ const config = {
     }
 }
 
+function getJsonFile(file) {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+}
+
 gulp.task('build-scss', () => {
     return gulp.src('*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -54,7 +58,7 @@ gulp.task('build-pages', () => {
         .pipe(data(() => {
             const d = { posts: [] };
             fs.readdirSync(config.postsTempDir).forEach(file => {
-                d.posts.push(require(config.postsTempDir + '/' + file));
+                d.posts.push(getJsonFile(config.postsTempDir + '/' + file));
             });
             return d;
         }))
@@ -73,7 +77,8 @@ gulp.task('posts:json-to-html', ['posts:markdown-to-json'], () => {
     return gulp.src(config.postsTempDir + '/*.json')
         .pipe(foreach((stream, file) => {
             return gulp.src('templates/post.pug')
-                .pipe(data(() => require(file.path)))
+                .pipe(plumber())
+                .pipe(data(() => getJsonFile(file.path)))
                 .pipe(rename({
                     basename: path.basename(file.path, '.json'),
                     extension: 'html',
@@ -109,7 +114,7 @@ gulp.task('browser-sync', () => {
 gulp.task('default', ['build', 'browser-sync'], () => {
     gulp.watch('*.scss', [ 'build-scss' ]);
     gulp.watch('*.pug', [ 'build-pages' ]);
-    gulp.watch('posts/*.md', [ 'build-posts' ]);
+    gulp.watch('posts/*.md', [ 'build-pages', 'build-posts' ]);
     gulp.watch('templates/*.pug', [ 'build-pages', 'build-posts' ]);
-    gulp.watch(outputDir + '/*').on('change', browserSync.reload);
+    gulp.watch(outputDir + '/**/*').on('change', browserSync.reload);
 });
