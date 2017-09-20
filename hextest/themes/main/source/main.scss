@@ -137,11 +137,17 @@ main {
     }
 }
 
-// BEGIN: Syntax highlighting
+a.header-anchor {
+    text-decoration: none;
+    margin-right: $unit / 2;
+    color: rgb(180, 180, 180);
 
-figure.highlight {
-    margin: 0;
+    &:hover {
+        text-decoration: underline;
+    }
 }
+
+// BEGIN: Syntax highlighting
 
 pre {
     background: $dark-blue;
