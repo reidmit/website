@@ -1,8 +1,0 @@
-extends templates/base.pug
-
-block main
-    each post in posts
-        section
-            .section-banner: span= post.date
-            .section-content
-                h1.post-preview= post.title

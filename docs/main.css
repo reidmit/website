@@ -84,6 +84,13 @@ main {
 .post h1 {
   margin-top: 8px; }
 
+a.header-anchor {
+  text-decoration: none;
+  margin-right: 4px;
+  color: #b4b4b4; }
+  a.header-anchor:hover {
+    text-decoration: underline; }
+
 pre {
   background: #002832;
   color: #f0f0f0;
