@@ -2,4 +2,24 @@
 
 These are the files for my personal website, which you can see live at [reidmitchell.net](http://reidmitchell.net).
 
-The pages were written in [Omelet](https://github.com/reid47/omelet), the front-end language that I've been working on for the past year or so. I encourage you to take a look at the Omelet files (ending in `.omelet`) to see how it works. They were compiled into HTML with the simple script `make.js`, which pretty much just runs `omelet.renderFile()` on each file that I want to compile. This site is the most complete (and currently only) living example of Omelet in the wild!
+If you're curious, I'm using [Hexo](https://hexo.io/) to build the site files (which are located in the /docs folder, where GitHub pages looks to serve them. I'm writing most of the content in [Markdown](http://commonmark.org/), the templates in [EJS](http://ejs.co/), and the styles in [Sass](http://sass-lang.com/).
+
+If you'd like to build this site locally, you can do that like this:
+
+```bash
+git clone https://github.com/reid47/website.git some-directory
+
+cd some-directory
+
+npm install
+
+hexo server --debug
+```
+
+This will start up a server at `localhost:4000`. It should listen for changes and rebuild/reload your pages automatically when it needs to.
+
+To build all the static files and place them in the `/docs` folder, run this:
+
+```bash
+hexo generate --debug
+```
