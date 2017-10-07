@@ -1,13 +1,9 @@
 <article>
   <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  <time>{{ .Date.Format "January 2, 2006" }}</time>
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
   {{ range .Params.tags }}
-  <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+  <a class="content-tag"
+    href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
+    title="Tag: {{ . }}"><span class="fa fa-tag" aria-hidden="true"></span>{{ . }}</a>
   {{ end }}
-  <div>
-    {{ .Summary }}
-    {{ if .Truncated }}
-      <a href="{{ .Permalink }}">Read more...</a>
-    {{ end }}
-  </div>
 </article>

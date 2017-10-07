@@ -6,48 +6,19 @@
     <description>Recent content in Posts on Reid Mitchell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Oct 2017 20:43:09 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 07 Oct 2017 05:17:36 +0000</lastBuildDate>
     
 	<atom:link href="http://reidmitchell.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Third Post</title>
-      <link>http://reidmitchell.net/posts/third-post/</link>
-      <pubDate>Mon, 09 Oct 2017 20:43:09 -0700</pubDate>
-      
-      <guid>http://reidmitchell.net/posts/third-post/</guid>
-      <description>This is my third post! It&amp;rsquo;s very exciting.
-I&amp;rsquo;m using Hugo to generate this site.</description>
-    </item>
-    
-    <item>
-      <title>Second Post</title>
-      <link>http://reidmitchell.net/posts/second-post/</link>
-      <pubDate>Sun, 08 Oct 2017 20:43:05 -0700</pubDate>
-      
-      <guid>http://reidmitchell.net/posts/second-post/</guid>
-      <description>This is my second post! It&amp;rsquo;s very exciting.
-I&amp;rsquo;m using Hugo to generate this site.</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>http://reidmitchell.net/posts/first-post/</link>
-      <pubDate>Sat, 07 Oct 2017 20:07:28 -0700</pubDate>
-      
-      <guid>http://reidmitchell.net/posts/first-post/</guid>
-      <description>This is my first post! It&amp;rsquo;s very exciting.
-I&amp;rsquo;m using Hugo to generate this site.</description>
-    </item>
-    
-    <item>
-      <title>A new website, built with Hugo</title>
+      <title>A new website (finally!)</title>
       <link>http://reidmitchell.net/posts/a-new-website/</link>
-      <pubDate>Fri, 06 Oct 2017 22:17:36 -0700</pubDate>
+      <pubDate>Sat, 07 Oct 2017 05:17:36 +0000</pubDate>
       
       <guid>http://reidmitchell.net/posts/a-new-website/</guid>
-      <description></description>
+      <description>Welcome to my new website!
+After several years of designing and redesigning, building and rebuilding, deleting and recreating my personal website an absurd number of times (30?), all without ever putting any real content on it, I have decided that enough is enough. I&amp;rsquo;m settling on a simple design and an easy-to-use framework for building the site (more on that to come in a future post!), so I can focus on what should really be the most important thing: the content.</description>
     </item>
     
   </channel>

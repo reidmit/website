@@ -1,8 +1,11 @@
 baseURL: http://reidmitchell.net/
+
 languageCode: en-us
 title: Reid Mitchell
+
 theme: rm
 publishDir: docs
 
 params:
   displayTitle: <rm/>
+  description: Writings and projects from Reid Mitchell, software engineer and filmmaker.

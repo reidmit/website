@@ -1,5 +1,7 @@
 $monospace-font: 'Overpass Mono', 'Consolas', monospace;
 $sans-serif-font: 'Lato', 'Helvetica', sans-serif;
+$dark: black;
+$light: white;
 
 * {
   box-sizing: border-box;
@@ -25,23 +27,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $monospace-font;
 }
 
+p {
+  line-height: 1.8rem;
+}
+
 a, a:visited {
   text-decoration: underline;
   color: inherit;
 }
 
 header, footer {
-  background: black;
-  color: white;
+  background: $dark;
+  color: $light;
   padding: 0.5rem;
 }
 
 header {
+  flex-grow: 0;
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
 
   .site-title {
-    vertical-align: center;
     font-size: 2rem;
     text-decoration: none;
   }
@@ -59,13 +66,48 @@ header {
   }
 }
 
-footer {
-  font-size: 0.8rem;
-}
-
 main {
   margin: 2rem auto;
-  max-width: 960px;
-  width: 100%;
+  max-width: 800px;
+  width: 90vw;
   flex: auto;
+}
+
+article {
+  margin-bottom: 3rem;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  time {
+    display: block;
+    font-size: 0.875rem;
+    font-family: $monospace-font;
+    margin-bottom: 0.25rem;
+  }
+
+  .single-content {
+    margin-top: 2rem;
+  }
+}
+
+a.content-tag {
+  text-decoration: none;
+  background: $dark;
+  color: $light;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+
+  .fa-tag {
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
