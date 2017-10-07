@@ -14,7 +14,9 @@
 				{{ .Content }}
 			</div>
 			<div>
+      {{ if eq .Type "post" }}
 				{{ template "_internal/disqus.html" . }}
+      {{ end }}
 			</div>
 		</article>
 	</main>

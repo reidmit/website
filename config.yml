@@ -2,6 +2,7 @@ baseURL: http://reidmitchell.net/
 
 languageCode: en-us
 title: Reid Mitchell
+disqusShortname: reidmitchell
 
 theme: rm
 publishDir: docs
