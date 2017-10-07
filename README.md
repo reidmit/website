@@ -2,26 +2,26 @@
 
 These are the files for my personal website, which you can see live at [reidmitchell.net](http://reidmitchell.net).
 
-If you're curious, I'm using [Hugo]https://gohugo.io/) to build the site files (which are located in the `/docs` folder, where GitHub pages looks to serve them). I'm writing most of the content in [Markdown](http://commonmark.org/) and the styles in [Sass](http://sass-lang.com/).
+If you're curious, I'm using [Hugo]https://gohugo.io/) to build the site files (which are located in the `/docs` folder, where GitHub pages looks to serve them). I'm writing most of the content in [Markdown](http://commonmark.org/) and the styles in [Sass](http://sass-lang.com/), using Gulp to help with converting the Sass files to CSS.
 
 If you'd like to build this site locally, you can follow these steps:
 
-1. Make sure you have Hugo installed. Check out the [installation instructions](https://gohugo.io/getting-started/installing/).
+1. Make sure you have Hugo and Node.js installed. Check out the [Hugo installation instructions](https://gohugo.io/getting-started/installing/) and [Node.js installation instructions](https://nodejs.org/en/download/). You will also need either [Yarn](https://yarnpkg.com/lang/en/docs/install/) or [NPM](https://docs.npmjs.com/cli/install) installed. I'm using `yarn` in the examples below, but the equivalent `npm` commands are very similar.
 
 2. Clone this repository to a local directory like this:
 
 ```bash
-git clone https://github.com/reid47/website.git some-directory
+git clone https://github.com/reid47/website.git your-directory
 ```
 
-3. Navigate to the local directory and build the site:
+3. Navigate to the local directory, run `yarn` to install all the Node dependencies, and then build the site:
 
 ```bash
 cd some-directory
-hugo
+yarn
+yarn run build
 ```
 
 This will generate all of the website files and put them in the `/docs` directory.
 
-4. You can use `hugo server` to start a local server while developing the site. Hugo will watch the files
-for changes and reload the pages in your browser automatically.
+4. As you're working on the site, you can also start a local server that will automatically reload the pages as you make changes to the site files. To do that, open up two terminal windows. In one of them, run `yarn run watch:css`. This will tell Gulp to start watching the SCSS files for changes and re-build the CSS when it needs to. In the other window, run `yarn run watch:site`. This will tell Hugo to start the server, watch the site files for changes, and re-build/reload the pages when necessary.
