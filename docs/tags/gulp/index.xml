@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gulp on Reid Mitchell</title>
+    <link>http://reidmitchell.net/tags/gulp/</link>
+    <description>Recent content in Gulp on Reid Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Oct 2017 22:17:36 -0700</lastBuildDate>
+    
+	<atom:link href="http://reidmitchell.net/tags/gulp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A new website, built with Hugo</title>
+      <link>http://reidmitchell.net/posts/a-new-website/</link>
+      <pubDate>Fri, 06 Oct 2017 22:17:36 -0700</pubDate>
+      
+      <guid>http://reidmitchell.net/posts/a-new-website/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

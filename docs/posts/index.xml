@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Reid Mitchell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2017 20:43:09 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2017 20:43:09 -0700</lastBuildDate>
     
 	<atom:link href="http://reidmitchell.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Third Post</title>
       <link>http://reidmitchell.net/posts/third-post/</link>
-      <pubDate>Fri, 06 Oct 2017 20:43:09 -0700</pubDate>
+      <pubDate>Mon, 09 Oct 2017 20:43:09 -0700</pubDate>
       
       <guid>http://reidmitchell.net/posts/third-post/</guid>
       <description>This is my third post! It&amp;rsquo;s very exciting.
@@ -24,7 +24,7 @@ I&amp;rsquo;m using Hugo to generate this site.</description>
     <item>
       <title>Second Post</title>
       <link>http://reidmitchell.net/posts/second-post/</link>
-      <pubDate>Fri, 06 Oct 2017 20:43:05 -0700</pubDate>
+      <pubDate>Sun, 08 Oct 2017 20:43:05 -0700</pubDate>
       
       <guid>http://reidmitchell.net/posts/second-post/</guid>
       <description>This is my second post! It&amp;rsquo;s very exciting.
@@ -34,11 +34,20 @@ I&amp;rsquo;m using Hugo to generate this site.</description>
     <item>
       <title>First Post</title>
       <link>http://reidmitchell.net/posts/first-post/</link>
-      <pubDate>Fri, 06 Oct 2017 20:07:28 -0700</pubDate>
+      <pubDate>Sat, 07 Oct 2017 20:07:28 -0700</pubDate>
       
       <guid>http://reidmitchell.net/posts/first-post/</guid>
       <description>This is my first post! It&amp;rsquo;s very exciting.
 I&amp;rsquo;m using Hugo to generate this site.</description>
+    </item>
+    
+    <item>
+      <title>A new website, built with Hugo</title>
+      <link>http://reidmitchell.net/posts/a-new-website/</link>
+      <pubDate>Fri, 06 Oct 2017 22:17:36 -0700</pubDate>
+      
+      <guid>http://reidmitchell.net/posts/a-new-website/</guid>
+      <description></description>
     </item>
     
   </channel>

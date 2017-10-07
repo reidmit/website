@@ -6,7 +6,7 @@
   "scripts": {
     "watch:site": "hugo server -D",
     "watch:css": "gulp watch",
-    "build": "gulp build-css && hugo"
+    "build": "rm -rf docs/ && gulp build-css && hugo"
   },
   "author": "Reid Mitchell",
   "license": "MIT",
