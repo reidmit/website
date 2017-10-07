@@ -6,20 +6,9 @@
     <description>Recent content on Reid Mitchell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2017 20:07:28 -0700</lastBuildDate>
     
 	<atom:link href="http://reidmitchell.net/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>First Post</title>
-      <link>http://reidmitchell.net/first-post/</link>
-      <pubDate>Fri, 06 Oct 2017 20:07:28 -0700</pubDate>
-      
-      <guid>http://reidmitchell.net/first-post/</guid>
-      <description>This is my first post! It&amp;rsquo;s very exciting.
-I&amp;rsquo;m using Hugo to generate this site.</description>
-    </item>
     
   </channel>
 </rss>
