@@ -26,8 +26,33 @@ footer,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Overpass Mono", "Consolas", monospace; }
 
+h1 {
+  font-size: 1.75rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.25rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 0.75rem; }
+
+h6 {
+  font-size: 0.5rem; }
+
 p {
   line-height: 1.8rem; }
+
+code {
+  background: black;
+  color: white;
+  padding: 0.2rem;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem; }
 
 a, a:visited {
   text-decoration: underline;
@@ -85,7 +110,9 @@ article {
   article .single-content {
     margin-top: 2rem; }
 
-a.content-tag {
+.content-tag, a.content-tag {
+  font-family: "Lato", "Helvetica", sans-serif;
+  font-weight: normal;
   text-decoration: none;
   background: black;
   color: white;
@@ -93,7 +120,7 @@ a.content-tag {
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem;
   font-size: 0.875rem; }
-  a.content-tag .fa-tag {
+  .content-tag .fa-tag, a.content-tag .fa-tag {
     font-size: 0.875rem;
     margin-right: 0.25rem; }
 

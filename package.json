@@ -4,7 +4,7 @@
   "description": "Reid Mitchell's personal website, built with Hugo.",
   "private": true,
   "scripts": {
-    "watch:site": "hugo server -D",
+    "watch:site": "hugo server -D --port 4747",
     "watch:css": "gulp watch",
     "build": "rm -rf docs/ && gulp build-css && hugo"
   },
