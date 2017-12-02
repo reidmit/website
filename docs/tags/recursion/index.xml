@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recursion on Reid Mitchell</title>
+    <link>http://reidmitchell.net/tags/recursion/</link>
+    <description>Recent content in Recursion on Reid Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Nov 2017 05:17:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://reidmitchell.net/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wrapping your head around recursion</title>
+      <link>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</link>
+      <pubDate>Wed, 15 Nov 2017 05:17:36 +0000</pubDate>
+      
+      <guid>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</guid>
+      <description>Let&amp;rsquo;s start with an analogy.
+Imagine you&amp;rsquo;re standing in a long line of people waiting for something on a very foggy day. It&amp;rsquo;s so foggy that nobody in line can see further than one person ahead of them and one person behind them. You certainly can&amp;rsquo;t see the beginning of the line. But you&amp;rsquo;re growing impatient, so you would like to know your position in the line. Are you 5th or 500th?</description>
+    </item>
+    
+  </channel>
+</rss>
