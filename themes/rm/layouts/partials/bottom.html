@@ -1,0 +1,13 @@
+  <script>
+    document.querySelector('.mobile-menu-button')
+      .addEventListener('click', function() {
+        const navClasses = document.querySelector('nav').classList;
+        if (navClasses.contains('is-shown')) {
+          navClasses.remove('is-shown');
+        } else {
+          navClasses.add('is-shown');
+        }
+      });
+  </script>
+</body>
+</html>

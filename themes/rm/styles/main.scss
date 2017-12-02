@@ -1,7 +1,9 @@
 $monospace-font: 'Overpass Mono', 'Consolas', monospace;
-$sans-serif-font: 'Lato', 'Helvetica', sans-serif;
-$dark: #111;
-$light: #eee;
+$sans-serif-font: 'Lato', 'Helvetica', Arial, sans-serif;
+$dark: rgb(0, 80, 80);
+$light: #fbffff;
+$unit: 1rem;
+$breakpoint: 800px;
 
 * {
   box-sizing: border-box;
@@ -11,20 +13,18 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   font-family: $sans-serif-font;
   font-size: 1.2rem;
   display: flex;
-  flex-direction: column;
-}
+  background: $light;
 
-header,
-footer,
-h1, h2, h3, h4, h5, h6 {
-  font-family: $monospace-font;
+  @media screen and (max-width: $breakpoint) {
+    flex-direction: column;
+  }
 }
 
 h1 { font-size: 1.75rem };
@@ -40,7 +40,7 @@ p {
 
 code {
   background: $dark;
-  color: $light;
+  color: #fff;
   padding: 0.2rem;
   border-radius: 0.5rem;
 }
@@ -50,41 +50,126 @@ a, a:visited {
   color: inherit;
 }
 
-header, footer {
+.sidebar {
   background: $dark;
   color: $light;
-  padding: 0.5rem;
-}
-
-header {
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+
+  .sidebar-header {
+    padding: 1rem;
+    flex: 0 0 auto;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+  }
 
   .site-title {
-    font-size: 2rem;
     text-decoration: none;
+    color: $light;
+    flex: 0 0 auto;
+  }
+
+  .site-title-spacer {
+    display: none;
+    flex: 1 1 auto;
+
+    @media screen and (max-width: $breakpoint) {
+      display: initial;
+    }
+  }
+
+  .mobile-menu-button {
+    background: transparent;
+    padding: 0;
+    color: $light;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    flex: 0 0 auto;
+    display: none;
+
+    @media screen and (max-width: $breakpoint) {
+      display: initial;
+    }
+
+    .mobile-menu-button-line {
+      background: $light;
+      width: 2.5rem;
+      height: 0.5rem;
+      border-radius: 4px;
+
+      + .mobile-menu-button-line {
+        margin-top: 0.5rem;
+      }
+    }
   }
 
   nav {
+    flex: 1 1 auto;
+
+    @media screen and (max-width: $breakpoint) {
+      display: none;
+    }
+
+    &.is-shown {
+      display: initial;
+    }
+
     ul {
       margin: 0;
       padding: 0;
 
       li {
         list-style-type: none;
-        padding: 0.5rem;
+
+        a {
+          display: block;
+          padding: 1rem;
+
+          &:hover, &:active {
+            background: $light;
+            color: $dark;
+          }
+        }
       }
+    }
+  }
+
+  .sidebar-footer {
+    flex: 0 0 auto;
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    @media screen and (max-width: $breakpoint) {
+      display: none;
     }
   }
 }
 
+.main-wrapper {
+  flex: 1 1 auto;
+  height: 100vh;
+  overflow-y: auto;
+
+  @media screen and (max-width: $breakpoint) {
+    overflow-y: initial;
+  }
+}
+
 main {
-  margin: 2rem auto;
-  max-width: 800px;
-  width: 90vw;
-  flex: auto;
+  padding: 0 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+
+
+  @media screen and (max-width: $breakpoint) {
+    padding: 0 1rem;
+  }
 }
 
 article {
@@ -111,7 +196,8 @@ article {
   font-weight: normal;
   text-decoration: none;
   background: $dark;
-  color: $light;
+  letter-spacing: 0.02rem;
+  color: #fff;
   padding: 0.25rem 0.4rem;
   font-size: 0.75rem;
 }

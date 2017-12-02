@@ -1,7 +1,6 @@
 ---
 title: About
 date: 2017-10-07T05:25:39.000Z
-menu: main
 ---
 
 Hi, I'm Reid!

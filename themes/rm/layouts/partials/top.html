@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{{ .Title }}</title>
+
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Overpass+Mono:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}styles/main.css?{{ now.Unix }}">
+  <link href="https://unpkg.com/flox-css" rel="stylesheet">
+  {{ if .RSSLink -}}<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}">{{- end }}
+</head>
+<body>

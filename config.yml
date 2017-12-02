@@ -9,3 +9,15 @@ publishDir: docs
 params:
   displayTitle: reid mitchell
   description: Writings and projects from Reid Mitchell, software engineer and filmmaker.
+
+menu:
+  main:
+    - Name: 'writing'
+      Identifier: 'posts'
+      URL: '/posts'
+      Weight: 1
+    - Name: 'about'
+      Identifier: 'about'
+      URL: '/pages/about'
+      Weight: 1000
+

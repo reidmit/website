@@ -1,3 +1,4 @@
+{{ partial "top.html" . }}
 {{ partial "header.html" . }}
 	<main>
     Tagged with: <span class="content-tag">{{ .Data.Term }}</span>
@@ -7,4 +8,4 @@
 		{{ end }}
 		{{ partial "pagination.html" . }}
 	</main>
-{{ partial "footer.html" . }}
+{{ partial "bottom.html" . }}
