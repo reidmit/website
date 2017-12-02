@@ -1,7 +1,7 @@
 $monospace-font: 'Overpass Mono', 'Consolas', monospace;
 $sans-serif-font: 'Lato', 'Helvetica', sans-serif;
-$dark: black;
-$light: white;
+$dark: #111;
+$light: #eee;
 
 * {
   box-sizing: border-box;
@@ -113,13 +113,7 @@ article {
   background: $dark;
   color: $light;
   padding: 0.25rem 0.4rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-
-  .fa-tag {
-    font-size: 0.875rem;
-    margin-right: 0.25rem;
-  }
+  font-size: 0.75rem;
 }
 
 footer {

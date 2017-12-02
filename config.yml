@@ -7,5 +7,5 @@ theme: rm
 publishDir: docs
 
 params:
-  displayTitle: <rm/>
+  displayTitle: reid mitchell
   description: Writings and projects from Reid Mitchell, software engineer and filmmaker.

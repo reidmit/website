@@ -4,6 +4,6 @@
   {{ range .Params.tags }}
   <a class="content-tag"
     href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
-    title="Tag: {{ . }}"><span class="fa fa-tag" aria-hidden="true"></span>{{ . }}</a>
+    title="Tag: {{ . }}">{{ . }}</a>
   {{ end }}
 </article>

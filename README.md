@@ -24,4 +24,10 @@ yarn run build
 
 This will generate all of the website files and put them in the `/docs` directory.
 
-4. As you're working on the site, you can also start a local server that will automatically reload the pages as you make changes to the site files. To do that, open up two terminal windows. In one of them, run `yarn run watch:css`. This will tell Gulp to start watching the SCSS files for changes and re-build the CSS when it needs to. In the other window, run `yarn run watch:site`. This will tell Hugo to start the server, watch the site files for changes, and re-build/reload the pages when necessary.
+4. As you're working on the site, you can also start a local server that will automatically reload the pages as you make changes to the site files:
+
+```bash
+yarn run watch
+```
+
+This will start a local server at `localhost:4747`.

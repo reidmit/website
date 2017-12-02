@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 	<main>
-    Tagged with: <span class="content-tag"><span class="fa fa-tag" aria-hidden="true"></span>{{ .Data.Term }}</span>
+    Tagged with: <span class="content-tag">{{ .Data.Term }}</span>
 		{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
 		{{ range $paginator.Pages }}
 			{{ partial "summary.html" . }}

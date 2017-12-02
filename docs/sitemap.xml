@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</loc>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://reidmitchell.net/posts/how-i-built-this-site/</loc>
     <lastmod>2017-10-08T15:21:51-07:00</lastmod>
   </url>
@@ -19,6 +24,12 @@
   
   <url>
     <loc>http://reidmitchell.net/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/computer-science/</loc>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -48,13 +59,19 @@
   
   <url>
     <loc>http://reidmitchell.net/posts/</loc>
-    <lastmod>2017-10-08T15:21:51-07:00</lastmod>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/recursion/</loc>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://reidmitchell.net/</loc>
-    <lastmod>2017-10-08T15:21:51-07:00</lastmod>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -66,7 +83,7 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/</loc>
-    <lastmod>2017-10-08T15:21:51-07:00</lastmod>
+    <lastmod>2017-11-15T05:17:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   

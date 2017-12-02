@@ -6,10 +6,20 @@
     <description>Recent content on Reid Mitchell</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2017 15:21:51 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 05:17:36 +0000</lastBuildDate>
     
 	<atom:link href="http://reidmitchell.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wrapping your head around recursion</title>
+      <link>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</link>
+      <pubDate>Wed, 15 Nov 2017 05:17:36 +0000</pubDate>
+      
+      <guid>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</guid>
+      <description>Let&amp;rsquo;s start with an analogy.
+Imagine you&amp;rsquo;re standing in a long line of people waiting for something on a very foggy day. It&amp;rsquo;s so foggy that nobody in line can see further than one person ahead of them and one person behind them. You certainly can&amp;rsquo;t see the beginning of the line. But you&amp;rsquo;re growing impatient, so you would like to know your position in the line. Are you 5th or 500th?</description>
+    </item>
     
     <item>
       <title>How I built this site</title>
@@ -28,6 +38,7 @@ There are tons of great options out there for this kind of thing, all with diffe
       
       <guid>http://reidmitchell.net/pages/about/</guid>
       <description>Hi, I&amp;rsquo;m Reid!
+I&amp;rsquo;m a software engineer and filmmaker currently living in San Francisco, CA. I&amp;rsquo;m passionate about creating things that make people&amp;rsquo;s lives a little easier or a little more enjoyable. My pronouns are he/him/his.
 If you&amp;rsquo;d like to get in touch, you can find me on LinkedIn or maybe Twitter. Some of my projects are up on GitHub.</description>
     </item>
     
