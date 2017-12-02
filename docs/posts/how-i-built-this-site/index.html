@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>How I built this site</title>
-	<meta name="description" content="Writings and projects from Reid Mitchell, software engineer and filmmaker.">
-	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>How I built this site</title>
+
+  <meta name="description" content="Writings and projects from Reid Mitchell, software engineer and filmmaker.">
+  
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Overpass+Mono:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="http://reidmitchell.net/styles/main.css?1512246075">
+  <link rel="stylesheet" href="http://reidmitchell.net/styles/main.css?1512253824">
   <link href="https://unpkg.com/flox-css" rel="stylesheet">
-	
-	<meta name="generator" content="Hugo 0.29" />
+  
 </head>
 <body>
-	<header>
-		<a class="site-title" href="http://reidmitchell.net/">reid mitchell</a>
+
+	<div class="sidebar">
+		<div class="sidebar-header">
+			<a class="site-title" href="http://reidmitchell.net/">reid mitchell</a>
+			<div class="site-title-spacer"></div>
+			<button class="mobile-menu-button">
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+			</button>
+		</div>
 		<nav>
 			<ul>
 				
-				<li><a href="/pages/about/">About</a></li>
+					<li>
+						<a href="/posts">writing</a>
+					</li>
+				
+					<li>
+						<a href="/pages/about">about</a>
+					</li>
 				
 			</ul>
 		</nav>
-	</header>
+		<div class="sidebar-footer">:-)</div>
+	</div>
 
-	<main>
-		<article>
-			<h1>How I built this site</h1>
-      
-        <time datetime="2017-10-08">October 8, 2017</time>
+  <div class="main-wrapper">
+  	<main>
+  		<article>
+  			<h1>How I built this site</h1>
         
-        <a class="content-tag"
-          href="/tags/web-design"
-          title="Tag: web design">web design</a>
+          <time datetime="2017-10-08">October 8, 2017</time>
+          
+          <a class="content-tag"
+            href="/tags/web-design"
+            title="Tag: web design">web design</a>
+          
+          <a class="content-tag"
+            href="/tags/hugo"
+            title="Tag: hugo">hugo</a>
+          
+          <a class="content-tag"
+            href="/tags/sass"
+            title="Tag: sass">sass</a>
+          
+          <a class="content-tag"
+            href="/tags/gulp"
+            title="Tag: gulp">gulp</a>
+          
+          <a class="content-tag"
+            href="/tags/meta"
+            title="Tag: meta">meta</a>
+          
         
-        <a class="content-tag"
-          href="/tags/hugo"
-          title="Tag: hugo">hugo</a>
-        
-        <a class="content-tag"
-          href="/tags/sass"
-          title="Tag: sass">sass</a>
-        
-        <a class="content-tag"
-          href="/tags/gulp"
-          title="Tag: gulp">gulp</a>
-        
-        <a class="content-tag"
-          href="/tags/meta"
-          title="Tag: meta">meta</a>
-        
-      
-			<div class="single-content">
-				
+  			<div class="single-content">
+  				
 
 <p>I&rsquo;m fascinated by the different technologies, languages, and methods people use to build websites. When I see a website I admire, I often spend time digging to see how it was built. So, I wanted to share the details behind how this site is made.</p>
 
@@ -107,10 +125,10 @@
 
 <p>And that&rsquo;s it! I realize that this probably seems over-engineered; there are certainly simpler ways to make a website. I&rsquo;m not claiming that mine is the best solution out there. The most important thing is that it&rsquo;s reliable, it&rsquo;s easy to make changes now that I&rsquo;ve set it up, and it&rsquo;s fast. It lets me focus my energy on things that I&rsquo;d rather be thinking about, like content and design. I&rsquo;m extremely happy so far!</p>
 
-			</div>
-			<div>
-      
-				<div id="disqus_thread"></div>
+  			</div>
+  			<div>
+        
+  				<div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
     
@@ -130,13 +148,22 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      
-			</div>
-		</article>
-	</main>
-<footer>
-  <p>&copy; 2017 <a href="http://reidmitchell.net/">Reid Mitchell</a></p>
-</footer>
+        
+  			</div>
+  		</article>
+  	</main>
+  </div>
+  <script>
+    document.querySelector('.mobile-menu-button')
+      .addEventListener('click', function() {
+        const navClasses = document.querySelector('nav').classList;
+        if (navClasses.contains('is-shown')) {
+          navClasses.remove('is-shown');
+        } else {
+          navClasses.add('is-shown');
+        }
+      });
+  </script>
 </body>
 </html>
 

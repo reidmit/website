@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Wrapping your head around recursion</title>
-	<meta name="description" content="Writings and projects from Reid Mitchell, software engineer and filmmaker.">
-	
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Wrapping your head around recursion</title>
+
+  <meta name="description" content="Writings and projects from Reid Mitchell, software engineer and filmmaker.">
+  
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Overpass+Mono:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="http://reidmitchell.net/styles/main.css?1512246075">
+  <link rel="stylesheet" href="http://reidmitchell.net/styles/main.css?1512253824">
   <link href="https://unpkg.com/flox-css" rel="stylesheet">
-	
-	<meta name="generator" content="Hugo 0.29" />
+  
 </head>
 <body>
-	<header>
-		<a class="site-title" href="http://reidmitchell.net/">reid mitchell</a>
+
+	<div class="sidebar">
+		<div class="sidebar-header">
+			<a class="site-title" href="http://reidmitchell.net/">reid mitchell</a>
+			<div class="site-title-spacer"></div>
+			<button class="mobile-menu-button">
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+			</button>
+		</div>
 		<nav>
 			<ul>
 				
-				<li><a href="/pages/about/">About</a></li>
+					<li>
+						<a href="/posts">writing</a>
+					</li>
+				
+					<li>
+						<a href="/pages/about">about</a>
+					</li>
 				
 			</ul>
 		</nav>
-	</header>
+		<div class="sidebar-footer">:-)</div>
+	</div>
 
-	<main>
-		<article>
-			<h1>Wrapping your head around recursion</h1>
-      
-        <time datetime="2017-11-15">November 15, 2017</time>
+  <div class="main-wrapper">
+  	<main>
+  		<article>
+  			<h1>Wrapping your head around recursion</h1>
         
-        <a class="content-tag"
-          href="/tags/recursion"
-          title="Tag: recursion">recursion</a>
+          <time datetime="2017-11-15">November 15, 2017</time>
+          
+          <a class="content-tag"
+            href="/tags/recursion"
+            title="Tag: recursion">recursion</a>
+          
+          <a class="content-tag"
+            href="/tags/computer-science"
+            title="Tag: computer science">computer science</a>
+          
         
-        <a class="content-tag"
-          href="/tags/computer-science"
-          title="Tag: computer science">computer science</a>
-        
-      
-			<div class="single-content">
-				
+  			<div class="single-content">
+  				
 
 <p>Let&rsquo;s start with an analogy.</p>
 
@@ -89,10 +107,10 @@
 
 <p><em>Acknowledgements: I did not invent this analogy myself. I adapted it from one that was first told to me by a friend, who heard it from her computer science professor (<a href="https://www.cmc.edu/academic/faculty/profile/john-sun">John Sun</a>). I just found this analogy so helpful, I wanted to share it with the world.</em></p>
 
-			</div>
-			<div>
-      
-				<div id="disqus_thread"></div>
+  			</div>
+  			<div>
+        
+  				<div id="disqus_thread"></div>
 <script>
     var disqus_config = function () {
     
@@ -112,13 +130,22 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      
-			</div>
-		</article>
-	</main>
-<footer>
-  <p>&copy; 2017 <a href="http://reidmitchell.net/">Reid Mitchell</a></p>
-</footer>
+        
+  			</div>
+  		</article>
+  	</main>
+  </div>
+  <script>
+    document.querySelector('.mobile-menu-button')
+      .addEventListener('click', function() {
+        const navClasses = document.querySelector('nav').classList;
+        if (navClasses.contains('is-shown')) {
+          navClasses.remove('is-shown');
+        } else {
+          navClasses.add('is-shown');
+        }
+      });
+  </script>
 </body>
 </html>
 
