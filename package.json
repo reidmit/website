@@ -7,7 +7,8 @@
     "watch:site": "hugo server -D --port 4747",
     "watch:css": "gulp watch",
     "watch": "concurrently \"npm run watch:site\" \"npm run watch:css\"",
-    "build": "rm -rf docs/ && gulp build-css && hugo"
+    "build": "rm -rf docs/ && gulp build-css && hugo",
+    "build-commit-push": "npm run build && git add -N . && git commit -am \"Building with latest changes\" && git push"
   },
   "author": "Reid Mitchell",
   "license": "MIT",

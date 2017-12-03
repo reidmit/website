@@ -16,7 +16,7 @@ menu:
       Identifier: 'posts'
       URL: '/posts'
       Weight: 1
-    - Name: 'code'
+    - Name: 'code projects'
       Identifier: 'code'
       URL: '/code'
       Weight: 2
