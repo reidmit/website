@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Films on Reid Mitchell</title>
+    <link>http://reidmitchell.net/films/</link>
+    <description>Recent content in Films on Reid Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2017 15:01:39 -0800</lastBuildDate>
+    
+	<atom:link href="http://reidmitchell.net/films/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>http://reidmitchell.net/films/contact/</link>
+      <pubDate>Sat, 02 Dec 2017 15:01:39 -0800</pubDate>
+      
+      <guid>http://reidmitchell.net/films/contact/</guid>
+      <description>  </description>
+    </item>
+    
+  </channel>
+</rss>

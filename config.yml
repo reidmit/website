@@ -16,6 +16,14 @@ menu:
       Identifier: 'posts'
       URL: '/posts'
       Weight: 1
+    - Name: 'code'
+      Identifier: 'code'
+      URL: '/code'
+      Weight: 2
+    - Name: 'films'
+      Identifier: 'films'
+      URL: '/films'
+      Weight: 3
     - Name: 'about'
       Identifier: 'about'
       URL: '/pages/about'
