@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Hashtag Lonely"
 date: "2017-12-02T15:39:58-08:00"
 type: code

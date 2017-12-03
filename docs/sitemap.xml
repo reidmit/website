@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://reidmitchell.net/code/hashtag-lonely/</loc>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/code/pixers/</loc>
+    <lastmod>2017-12-02T15:39:17-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/films/erasure/</loc>
+    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/films/evolution/</loc>
+    <lastmod>2017-12-02T15:26:05-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://reidmitchell.net/films/contact/</loc>
     <lastmod>2017-12-02T15:01:39-08:00</lastmod>
   </url>
@@ -29,12 +49,24 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/16mm/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
+    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/arduino/</loc>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://reidmitchell.net/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/code/</loc>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -46,13 +78,19 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/film/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
+    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://reidmitchell.net/films/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
+    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/generative-art/</loc>
+    <lastmod>2017-12-02T15:39:17-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,8 +101,20 @@
   </url>
   
   <url>
+    <loc>http://reidmitchell.net/tags/html5-canvas/</loc>
+    <lastmod>2017-12-02T15:39:17-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://reidmitchell.net/tags/hugo/</loc>
     <lastmod>2017-10-08T15:21:51-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/javascript/</loc>
+    <lastmod>2017-12-02T15:39:17-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -87,6 +137,12 @@
   </url>
   
   <url>
+    <loc>http://reidmitchell.net/tags/processing/</loc>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://reidmitchell.net/tags/recursion/</loc>
     <lastmod>2017-11-15T05:17:36+00:00</lastmod>
     <priority>0</priority>
@@ -94,7 +150,13 @@
   
   <url>
     <loc>http://reidmitchell.net/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/tags/robot/</loc>
+    <lastmod>2017-12-02T15:39:58-08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -106,7 +168,7 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
+    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
     <priority>0</priority>
   </url>
   

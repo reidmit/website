@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: "{{ .Date }}"
 type: film

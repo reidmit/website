@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Evolution"
 date: "2017-12-02T15:26:05-08:00"
 type: film

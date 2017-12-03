@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Erasure"
 date: "2017-12-02T15:29:19-08:00"
 type: film

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Processing on Reid Mitchell</title>
+    <link>http://reidmitchell.net/tags/processing/</link>
+    <description>Recent content in Processing on Reid Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2017 15:39:58 -0800</lastBuildDate>
+    
+	<atom:link href="http://reidmitchell.net/tags/processing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hashtag Lonely</title>
+      <link>http://reidmitchell.net/code/hashtag-lonely/</link>
+      <pubDate>Sat, 02 Dec 2017 15:39:58 -0800</pubDate>
+      
+      <guid>http://reidmitchell.net/code/hashtag-lonely/</guid>
+      <description>On the internet, nobody can see your face. Nobody can know how you are feeling or what you are doing unless you decide to broadcast it. Some choose to hide their emotions online. These people use the internet as a shield, a disguise, and escape into anonymity. Others choose instead to exaggerate their feelings, to project caricatures of themselves that play up their unhappiness for sympathy and their excitement for validation.</description>
+    </item>
+    
+  </channel>
+</rss>
