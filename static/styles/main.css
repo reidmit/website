@@ -46,7 +46,7 @@ p {
   line-height: 1.8rem; }
 
 code {
-  background: #005050;
+  background: #003c46;
   color: #fff;
   padding: 0.2rem;
   -webkit-border-radius: 0.5rem;
@@ -59,7 +59,7 @@ a, a:visited {
   color: inherit; }
 
 .sidebar {
-  background: #005050;
+  background: #003c46;
   color: #fbffff;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -169,7 +169,7 @@ a, a:visited {
           transition: background 0.1s ease-in-out, color 0.1s ease-in-out; }
           .sidebar nav ul li a:hover, .sidebar nav ul li a:active, .sidebar nav ul li a:focus {
             background: #fbffff;
-            color: #005050; }
+            color: #003c46; }
   .sidebar .sidebar-footer {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
@@ -214,7 +214,7 @@ article {
   font-family: "Lato", "Helvetica", Arial, sans-serif;
   font-weight: normal;
   text-decoration: none;
-  background: #005050;
+  background: #003c46;
   letter-spacing: 0.02rem;
   color: #fff;
   padding: 0.25rem 0.4rem;
