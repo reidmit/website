@@ -13,21 +13,6 @@
   </url>
   
   <url>
-    <loc>http://reidmitchell.net/films/erasure/</loc>
-    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://reidmitchell.net/films/evolution/</loc>
-    <lastmod>2017-12-02T15:26:05-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://reidmitchell.net/films/contact/</loc>
-    <lastmod>2017-12-02T15:01:39-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</loc>
     <lastmod>2017-11-15T05:17:36+00:00</lastmod>
   </url>
@@ -48,8 +33,23 @@
   </url>
   
   <url>
+    <loc>http://reidmitchell.net/films/contact/</loc>
+    <lastmod>2014-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/films/erasure/</loc>
+    <lastmod>2014-03-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://reidmitchell.net/films/evolution/</loc>
+    <lastmod>2014-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://reidmitchell.net/tags/16mm/</loc>
-    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <lastmod>2014-05-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,13 +78,13 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/film/</loc>
-    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <lastmod>2014-05-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://reidmitchell.net/films/</loc>
-    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <lastmod>2014-05-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,7 +168,7 @@
   
   <url>
     <loc>http://reidmitchell.net/tags/</loc>
-    <lastmod>2017-12-02T15:29:19-08:00</lastmod>
+    <lastmod>2014-05-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -30,33 +30,6 @@
     </item>
     
     <item>
-      <title>Erasure</title>
-      <link>http://reidmitchell.net/films/erasure/</link>
-      <pubDate>Sat, 02 Dec 2017 15:29:19 -0800</pubDate>
-      
-      <guid>http://reidmitchell.net/films/erasure/</guid>
-      <description>  </description>
-    </item>
-    
-    <item>
-      <title>Evolution</title>
-      <link>http://reidmitchell.net/films/evolution/</link>
-      <pubDate>Sat, 02 Dec 2017 15:26:05 -0800</pubDate>
-      
-      <guid>http://reidmitchell.net/films/evolution/</guid>
-      <description>  </description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>http://reidmitchell.net/films/contact/</link>
-      <pubDate>Sat, 02 Dec 2017 15:01:39 -0800</pubDate>
-      
-      <guid>http://reidmitchell.net/films/contact/</guid>
-      <description>  </description>
-    </item>
-    
-    <item>
       <title>Wrapping your head around recursion</title>
       <link>http://reidmitchell.net/posts/wrapping-your-head-around-recursion/</link>
       <pubDate>Wed, 15 Nov 2017 05:17:36 +0000</pubDate>
@@ -95,6 +68,36 @@ If you&amp;rsquo;d like to get in touch, you can find me on LinkedIn or maybe Tw
       <guid>http://reidmitchell.net/posts/a-new-website/</guid>
       <description>Welcome to my new website!
 After several years of designing and redesigning, building and rebuilding, deleting and recreating my personal website an absurd number of times (30?), all without ever putting any real content on it, I have decided that enough is enough. I&amp;rsquo;m settling on a simple design and an easy-to-use framework for building the site (more on that in this post!), so I can focus on what should really be the most important thing: the content.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://reidmitchell.net/films/contact/</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://reidmitchell.net/films/contact/</guid>
+      <description>An experiment with contact printing. Some of this 16mm film was shot using a camera, but most was exposed by laying the film out on the floor of a pitch dark room, placing items on it, and manually exposing it piece-by-piece with a flashlight.
+Made for a handmade film class.</description>
+    </item>
+    
+    <item>
+      <title>Erasure</title>
+      <link>http://reidmitchell.net/films/erasure/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://reidmitchell.net/films/erasure/</guid>
+      <description>An experiment in hand-scratched, hand-colored 16mm film. Shot, developed, and then intervened upon to give the effect you see here.
+Made for a handmade film class.</description>
+    </item>
+    
+    <item>
+      <title>Evolution</title>
+      <link>http://reidmitchell.net/films/evolution/</link>
+      <pubDate>Wed, 05 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://reidmitchell.net/films/evolution/</guid>
+      <description>My first experiment with 16mm film. My original plan for this was quite different from what you see here, but I didn&amp;rsquo;t quite know what I was doing with the camera, so I only got a small amount of usable footage. The piece then evolved to be about its own evolution into something (sort of) watchable.
+Made for a handmade film class.</description>
     </item>
     
   </channel>
