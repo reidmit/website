@@ -25,22 +25,22 @@ body {
               flex-direction: column; } }
 
 h1 {
-  font-size: 1.75rem; }
+  font-size: 2.2rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.8rem; }
 
 h3 {
-  font-size: 1.25rem; }
+  font-size: 1.4rem; }
 
 h4 {
   font-size: 1rem; }
 
 h5 {
-  font-size: 0.75rem; }
+  font-size: 0.6rem; }
 
 h6 {
-  font-size: 0.5rem; }
+  font-size: 0.2rem; }
 
 p {
   line-height: 1.8rem; }
@@ -77,9 +77,16 @@ a, a:visited {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 200px; }
+  max-width: 400px;
+  min-width: 200px;
+  width: 25vw;
+  text-align: right; }
+  @media screen and (max-width: 800px) {
+    .sidebar {
+      width: 100%;
+      max-width: 100%; } }
   .sidebar .sidebar-header {
-    padding: 1rem;
+    padding: 1rem 2rem;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
@@ -89,7 +96,12 @@ a, a:visited {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .sidebar .site-title {
     text-decoration: none;
     color: #fbffff;
@@ -97,7 +109,7 @@ a, a:visited {
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    width: 100px; }
+    width: 120px; }
     @media screen and (max-width: 800px) {
       .sidebar .site-title {
         width: initial; } }
@@ -151,8 +163,11 @@ a, a:visited {
         list-style-type: none; }
         .sidebar nav ul li a {
           display: block;
-          padding: 1rem; }
-          .sidebar nav ul li a:hover, .sidebar nav ul li a:active {
+          padding: 1rem 2rem;
+          -webkit-transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+          -o-transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+          transition: background 0.1s ease-in-out, color 0.1s ease-in-out; }
+          .sidebar nav ul li a:hover, .sidebar nav ul li a:active, .sidebar nav ul li a:focus {
             background: #fbffff;
             color: #005050; }
   .sidebar .sidebar-footer {
@@ -180,8 +195,7 @@ a, a:visited {
 
 main {
   padding: 0 2rem;
-  max-width: 48rem;
-  margin: 0 auto; }
+  max-width: 48rem; }
   @media screen and (max-width: 800px) {
     main {
       padding: 0 1rem; } }
