@@ -86,7 +86,10 @@ a, a:visited {
       width: 100%;
       max-width: 100%; } }
   .sidebar .sidebar-header {
-    padding: 1rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
@@ -102,6 +105,9 @@ a, a:visited {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+    @media screen and (max-width: 800px) {
+      .sidebar .sidebar-header {
+        padding: 1rem; } }
   .sidebar .site-title {
     text-decoration: none;
     color: #fbffff;
