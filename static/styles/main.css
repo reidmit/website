@@ -210,9 +210,10 @@ article {
   margin-bottom: 3rem; }
   article h1 {
     margin-bottom: 0.5rem; }
-  article time {
+  article .time {
     display: block;
-    margin-bottom: 0.25rem; }
+    font-size: 1rem;
+    margin-bottom: 0.5rem; }
   article .single-content {
     margin-top: 2rem; }
 
