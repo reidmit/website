@@ -5,6 +5,7 @@ title: Reid Mitchell
 disqusShortname: reidmitchell
 theme: rm
 publishDir: docs
+pygmentsCodeFences: true
 
 params:
   displayTitle: reid mitchell

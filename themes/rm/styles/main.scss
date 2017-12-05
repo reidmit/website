@@ -38,11 +38,25 @@ p {
   line-height: 1.8rem;
 }
 
-code {
-  background: $dark;
-  color: #fff;
+p code, ul code, ol code {
+  font-weight: bold;
+  font-size: 1.4rem;
   padding: 0.2rem;
-  border-radius: 0.5rem;
+}
+
+.highlight {
+  pre {
+    padding: 1rem;
+  }
+}
+
+kbd {
+  border: 1px solid $dark;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  padding: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 a, a:visited {
