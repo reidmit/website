@@ -1,5 +1,5 @@
 ---
-title: "Writing your first webpage, part 1: HTML"
+title: "Writing your first webpage, pt. 1: HTML"
 date: "2017-12-04T17:19:16-08:00"
 type: post
 tags:
@@ -127,7 +127,7 @@ You should also see that the browser tab/window that your webpage lives in is no
 There are lots of HTML tags out there that do different things. Try out `<button></button>`, `<textarea></textarea>`, or `<i></i>`. I encourage you to experiment with new tags and different combinations of tags!
 
 
-A full list of tags can be found on [w3Schools](https://www.w3schools.com/tags/default.asp), which also has a lot of great information about HTML in general.
+A full list of tags can be found on [w3schools](https://www.w3schools.com/tags/default.asp), which also has a lot of great information about HTML in general.
 
 
 ## Looking ahead
