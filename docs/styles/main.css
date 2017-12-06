@@ -45,12 +45,22 @@ h6 {
 p {
   line-height: 1.8rem; }
 
-code {
-  background: #003c46;
-  color: #fff;
+p code, ul code, ol code {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0.2rem; }
+
+.highlight pre {
+  padding: 1rem; }
+
+kbd {
+  border: 1px solid #003c46;
+  -webkit-border-radius: 0.25rem;
+          border-radius: 0.25rem;
+  font-family: monospace;
   padding: 0.2rem;
-  -webkit-border-radius: 0.5rem;
-          border-radius: 0.5rem; }
+  font-size: 1.4rem;
+  font-weight: bold; }
 
 a, a:visited {
   text-decoration: underline;

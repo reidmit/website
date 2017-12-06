@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Writing your first webpage, pt. 1: HTML</title>
+
+  <meta name="description" content="Writings and projects from Reid Mitchell, software engineer and filmmaker.">
+  
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Overpass+Mono:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://reidmitchell.net/styles/main.css?1512526361">
+  <link href="https://unpkg.com/flox-css" rel="stylesheet">
+  
+</head>
+<body>
+
+	<div class="sidebar">
+		<div class="sidebar-header">
+			<a class="site-title" href="http://reidmitchell.net/">reid mitchell</a>
+			<div class="site-title-spacer"></div>
+			<button class="mobile-menu-button">
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+				<div class="mobile-menu-button-line"></div>
+			</button>
+		</div>
+		<nav>
+			<ul>
+				
+					<li>
+						<a href="/posts">writing</a>
+					</li>
+				
+					<li>
+						<a href="/code">code projects</a>
+					</li>
+				
+					<li>
+						<a href="/films">films</a>
+					</li>
+				
+					<li>
+						<a href="/pages/about">about</a>
+					</li>
+				
+			</ul>
+		</nav>
+		<div class="sidebar-footer"></div>
+	</div>
+
+  <div class="main-wrapper">
+  	<main>
+  		<article>
+  			<h1>Writing your first webpage, pt. 1: HTML</h1>
+        
+          <time class="time">December 4, 2017</time>
+          
+          <a class="content-tag"
+            href="/tags/html"
+            title="Tag: html">html</a>
+          
+          <a class="content-tag"
+            href="/tags/beginner"
+            title="Tag: beginner">beginner</a>
+          
+          <a class="content-tag"
+            href="/tags/web-design"
+            title="Tag: web design">web design</a>
+          
+          <a class="content-tag"
+            href="/tags/writing-your-first-webpage"
+            title="Tag: writing your first webpage">writing your first webpage</a>
+          
+        
+  			<div class="single-content">
+  				
+
+<p>So, you want to build a website, but you don&rsquo;t know where to start.</p>
+
+<p>Maybe you&rsquo;ve heard something about HTML, but you aren&rsquo;t sure what it is. Maybe you&rsquo;ve never heard of it. Either way, this post will help you get started building websites!</p>
+
+<h2 id="what-is-a-website">What is a website?</h2>
+
+<p>A website is just a bunch of files, like the files on your computer. Each file is made up of some text that tells your browser (e.g. Chrome, Safari, Firefox) how to display your content.</p>
+
+<p>To see what I mean, take a look at the text that makes up this website by right-clicking on this webpage and choosing &ldquo;View page source&rdquo; (or something similar). You&rsquo;ll see some code that looks kind of like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span><span style="">
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">html</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">head</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">    </span><span style="color:#75715e">&lt;!-- head section --&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">head</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">body</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">    </span><span style="color:#75715e">&lt;!-- body section --&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">body</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">html</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>This code is written in a language called <strong>HTML</strong>.</p>
+
+<h2 id="what-is-html">What is HTML?</h2>
+
+<p>HTML is short for <a href="https://en.wikipedia.org/wiki/HTML">Hypertext Markup Language</a>. It&rsquo;s the language that powers every website on the internet. To start writing a website, we&rsquo;ll need to learn some HTML.</p>
+
+<p>Writing HTML is pretty simple. Almost everything in HTML is an <strong>element</strong> that has <strong>opening and closing tags</strong>. An element called <code>tagName</code> would look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">tagName</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">something inside the tag</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">tagName</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>The opening tag is <code>&lt;tagName&gt;</code>, and the closing tag is <code>&lt;/tagName&gt;</code>. Everything between these two tags is considered the contents of the <code>tagName</code> element.</p>
+
+<p>Sometimes, you will want to set certain <strong>attributes</strong> of a tag. This is a way of changing properties of an element that will not be displayed on the screen.</p>
+
+<p>A single element can have multiple attributes at the same time. Here&rsquo;s an example of what attributes look like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">tagName</span><span style=""> </span><span style="color:#a6e22e">attribute1</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;attribute 1 value&#34;</span><span style=""> </span><span style="color:#a6e22e">attribute2</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;attribute 2 value&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  something inside the tag
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">tagName</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>And that&rsquo;s pretty much it! If you can remember that, you have already mastered the hardest part of writing HTML. Now, let&rsquo;s start building your first webpage.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To begin, open up a text editor. If you don&rsquo;t have a preferred text editor, I recommend <a href="https://atom.io/">Atom</a> or <a href="https://www.sublimetext.com/">Sublime Text</a> (both available for free download), but you could even use something like Notepad (which comes with Windows) or Text Editor (which comes with Mac OS X).</p>
+
+<p>Once you have your text editor ready, open it up and create a new file. <strong>Copy the first HTML example from above and paste it into your new, empty file</strong>.</p>
+
+<p>Delete the text that says <code>&lt;!-- head section --&gt;</code> and <code>&lt;!-- body section --&gt;</code>. These were just examples.</p>
+
+<p>Now, in between the <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> tags, write these words:</p>
+
+<blockquote>
+<p><strong>Hello, world! This is my website!</strong></p>
+</blockquote>
+
+<p>At this point, your file should look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span><span style="">
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">html</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">head</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">head</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">body</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">    Hello, world! This is my website!
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">body</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">html</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>Great! Let&rsquo;s see what your webpage looks like in your browser.</p>
+
+<h2 id="viewing-your-webpage">Viewing your webpage</h2>
+
+<p>Save this new file as <code>hello-world.html</code> in a folder on your computer that you&rsquo;ll remember. (Actually, you can call the file whatever you want, but you will need the <code>.html</code> extension!)</p>
+
+<p>Next, open up your favorite internet browser (probably whatever you&rsquo;re using to read this post). Use <kbd>CTRL</kbd> + <kbd>O</kbd> (on Windows) or <kbd>&#8984;</kbd> + <kbd>O</kbd> (on Mac OS X) to open a file to view in your browser.</p>
+
+<p>Find the <code>.html</code> file that you just saved and open it. You should see the words you just typed: <strong>Hello, world! This is my website!</strong></p>
+
+<p>Congratulations! That&rsquo;s it! You just wrote a whole website and visited it in your browser!</p>
+
+<h2 id="experimenting">Experimenting</h2>
+
+<p>Of course, there is a lot more we can do at this point.</p>
+
+<p>Go back to your text editor and change the text between the <code>body</code> tags to whatever you want. Save the file and refresh the page in your browser. You should see your new text displayed on the page.</p>
+
+<p>Let&rsquo;s make a few additions to our webpage and explore more of what HTML can do.</p>
+
+<p>Somewhere between your <code>body</code> tags, write this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">h1</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">This is some huge text!</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">h1</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>Somewhere between your <code>head</code> tags, write this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">title</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">I love HTML</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">title</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>And somewhere between your <code>body</code> tags again, write this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">a</span><span style=""> </span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style=""></span><span style="color:#e6db74">&#34;http://www.example.com&#34;</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">Click me</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">a</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p>Now, when you save and refresh the page in your browser, you should see that the <code>h1</code> tag gave you really large text, and that the <code>a</code> tag gave you a link! Note how we set the <code>href</code> attribute on the <code>a</code> tag to the URL of the website that we want to link to (<code>http://www.example.com</code>).</p>
+
+<p>You should also see that the browser tab/window that your webpage lives in is now called <strong>&ldquo;I love HTML&rdquo;</strong>. This is what the <code>title</code> tag does.</p>
+
+<p>There are lots of HTML tags out there that do different things. Try out <code>&lt;button&gt;&lt;/button&gt;</code>, <code>&lt;textarea&gt;&lt;/textarea&gt;</code>, or <code>&lt;i&gt;&lt;/i&gt;</code>. I encourage you to experiment with new tags and different combinations of tags!</p>
+
+<p>A full list of tags can be found on <a href="https://www.w3schools.com/tags/default.asp">w3schools</a>, which also has a lot of great information about HTML in general.</p>
+
+<h2 id="looking-ahead">Looking ahead</h2>
+
+<p>We focused on HTML in this post, which is important to start with because it&rsquo;s the backbone of any website. But there&rsquo;s a lot more that we can do to make our websites look interesting once we learn CSS. Stay tuned for <strong>part 2: CSS</strong>,  coming soon!</p>
+
+<p>You might also be wondering how you can share your new website with other people. At the moment, your website just lives on your computer, so there is no way for you to send them a link and have them open it up on their computer. However, look out for a future post where we&rsquo;ll explore how to put your website out into the wild for all to see!</p>
+
+<p><strong>If you have any questions, please leave a comment below :)</strong></p>
+
+  			</div>
+  			<div>
+        
+  				<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "reidmitchell" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+  			</div>
+  		</article>
+  	</main>
+  </div>
+  <script>
+    document.querySelector('.mobile-menu-button')
+      .addEventListener('click', function() {
+        const navClasses = document.querySelector('nav').classList;
+        if (navClasses.contains('is-shown')) {
+          navClasses.remove('is-shown');
+        } else {
+          navClasses.add('is-shown');
+        }
+      });
+  </script>
+</body>
+</html>
+

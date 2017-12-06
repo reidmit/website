@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on Reid Mitchell</title>
+    <link>http://reidmitchell.net/tags/beginner/</link>
+    <description>Recent content in Beginner on Reid Mitchell</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Dec 2017 17:19:16 -0800</lastBuildDate>
+    
+	<atom:link href="http://reidmitchell.net/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Writing your first webpage, pt. 1: HTML</title>
+      <link>http://reidmitchell.net/posts/writing-your-first-webpage/</link>
+      <pubDate>Mon, 04 Dec 2017 17:19:16 -0800</pubDate>
+      
+      <guid>http://reidmitchell.net/posts/writing-your-first-webpage/</guid>
+      <description>So, you want to build a website, but you don&amp;rsquo;t know where to start.
+Maybe you&amp;rsquo;ve heard something about HTML, but you aren&amp;rsquo;t sure what it is. Maybe you&amp;rsquo;ve never heard of it. Either way, this post will help you get started building websites!
+What is a website? A website is just a bunch of files, like the files on your computer. Each file is made up of some text that tells your browser (e.</description>
+    </item>
+    
+  </channel>
+</rss>
