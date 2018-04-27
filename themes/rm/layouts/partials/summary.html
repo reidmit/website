@@ -1,9 +1,0 @@
-<article>
-  <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  <time class="time">{{ .Params.dateString | default (.Date.Format "January 2, 2006") }}</time>
-  {{ range .Params.tags }}
-  <a class="content-tag"
-    href="{{ "/tags/" | relLangURL }}{{ . | urlize }}"
-    title="Tag: {{ . }}">{{ . }}</a>
-  {{ end }}
-</article>

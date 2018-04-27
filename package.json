@@ -1,22 +1,17 @@
 {
   "name": "reidmitchell.net",
-  "version": "2.0.0",
-  "description": "Reid Mitchell's personal website, built with Hugo.",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "index.js",
+  "repository": "https://github.com/reid47/website.git",
+  "author": "Reid Mitchell <reidmitchell1@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "watch:site": "hugo server -D --port 4747",
-    "watch:css": "gulp watch",
-    "watch": "concurrently \"npm run watch:site\" \"npm run watch:css\"",
-    "build": "rm -rf docs/ && gulp build-css && hugo",
-    "build-commit-push": "npm run build && git add -N . && git commit -am \"Building with latest changes\" && git push"
+    "build": "rm -rf dist && cp -r src dist/",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "Reid Mitchell",
-  "license": "MIT",
   "devDependencies": {
-    "concurrently": "^3.5.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0"
+    "gh-pages": "^1.1.0"
   }
 }
