@@ -1,5 +1,73 @@
 :root {
-  --color-light: #eee;
-  --color-dark: #222;
-  --color-primary: #33aaaa;
+  --color-light: #fefefe;
+  --color-dark: #223;
+  --color-primary: #339999;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--color-dark);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 32px auto;
+  padding: 0 32px;
+  max-width: 600px;
+  background: var(--color-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: lowercase;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 200;
+  padding-bottom: 24px;
+  border-bottom: 8px solid var(--color-primary);
+}
+
+p,
+li {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.external-links li {
+  list-style-type: square;
+}
+
+.external-links li a {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.external-links li a:hover,
+.external-links li a:focus {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
+.external-links span {
+  color: inherit;
+}
+
+.link-name {
+  text-decoration: underline;
 }
