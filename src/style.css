@@ -100,6 +100,7 @@ p {
   width: 100%;
   padding: 8px;
   text-decoration: none;
+  border-radius: 2px;
 }
 
 .external-links li a,
