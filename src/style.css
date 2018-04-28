@@ -76,6 +76,15 @@ p {
   line-height: 1.5em;
 }
 
+a:link,
+a:visited {
+  color: var(--color-dark);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
 .external-links {
   padding: 0;
   text-align: left;
