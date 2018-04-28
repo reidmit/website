@@ -11,6 +11,8 @@
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+    crossorigin="anonymous">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
   <script>
@@ -22,40 +24,98 @@
 </head>
 
 <body>
-  <h1>Reid Mitchell</h1>
+  <section id="intro">
+    <div class="section-content">
+      <img class="me" src="me.jpg" alt="Me, smiling and standing in Bruges" />
 
-  <p>I'm a software engineer and filmmaker currently living in San Francisco, CA. I'm passionate about creating things that
-    make people's lives a little easier or a little more enjoyable. My pronouns are he/him/his.</p>
+      <h1 class="no-border">Reid Mitchell</h1>
 
-  <p>These days, I'm especially interested in front-end web development (JavaScript, React, etc), building accessible user interfaces,
-    and programming language design (compiler-writing, type-checking, etc).</p>
+      <ul class="external-links">
+        <li>
+          <a href="#about">
+            <i class="fa fa-info"></i>
+            about me
+          </a>
+        </li>
+        <li>
+          <a href="#projects">
+            <i class="fa fa-star"></i>
+            recent projects
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/reid47">
+            <i class="fa fa-code"></i>
+            code on GitHub
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://medium.com/@reidmitchell">
+            <i class="fa fa-pencil-alt"></i>
+            writing on Medium
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/reid47_">
+            <i class="fab fa-twitter"></i>
+            tweets on Twitter
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/reidmitchell/">
+            <i class="fab fa-linkedin-in"></i>
+            profile on LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <p>Prior to entering the "real world," I grew up in a suburb of New York and went to school at Pomona College, where I majored
-    in computer science and media studies.</p>
+  <section id="about">
+    <div class="section-content">
+      <h1>about me</h1>
 
-  <h2>Links:</h2>
+      <p>I&rsquo;m a software engineer and filmmaker currently living in San Francisco, CA. I&rsquo;m passionate about creating
+        things that make people&rsquo;s lives a little easier or a little more enjoyable. My pronouns are he/him/his.</p>
 
-  <ul class="external-links">
-    <li>
-      <a target="_blank" href="https://github.com/reid47">
-        <span class="link-name">GitHub</span>: most of my code projects live here
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://medium.com/@reidmitchell">
-        <span class="link-name">Medium</span>: some writing I've done
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://twitter.com/reid47_">
-        <span class="link-name">Twitter</span>: sometimes I tweet, but not very often
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.linkedin.com/in/reidmitchell/">
-        <span class="link-name">LinkedIn</span>: my professional profile</a>
-    </li>
-  </ul>
+      <p>These days, I&rsquo;m especially interested in front-end web development (JavaScript, React, etc), building accessible
+        user interfaces, and programming language design (compiler-writing, type-checking, etc).</p>
+
+      <p>Prior to entering the &ldquo;real world,&rdquo; I grew up in a suburb of New York and went to school at Pomona College,
+        where I majored in computer science and media studies.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-content">
+      <h1>recent projects</h1>
+
+      <ul class="recent-projects">
+        <li>
+          <b>Pluma:</b>
+          I&rsquo;m designing a statically-typed, functional programming language that compiles to JavaScript. It&rsquo;s very much
+          still a work-in-progress, but you can follow along with the project (and view the code) on
+          <a target="_blank" href="https://github.com/reid47/pluma">GitHub</a>.
+        </li>
+
+        <li>
+          <b>Turnstyle:</b>
+          As an experiment to learn more about
+          <a target="_blank" href="https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc">CSS-in-JS</a>, I built my own CSS-in-JS library. This involved writing a CSS parser/preprocessor from scratch.
+          It does automatic vendor-prefixing, has no dependencies, and supports server-side rendering. From my testing, it&rsquo;s
+          quite a bit smaller and faster than many of the other solutions out there. Check it out on
+          <a target="_blank" href="https://github.com/reid47/turnstyle">GitHub</a>.
+        </li>
+
+        <li>
+          <b>Redraw:</b>
+          A pixel art tool built using React and the HTML5 Canvas. It&rsquo;s meant to make creating pixel art easy and fun.
+          <a target="_blank" href="http://redraw.reidmitchell.net">Try it out</a>, or browse the source code on
+          <a target="_blank" href="https://github.com/reid47/redraw">GitHub</a>.
+        </li>
+      </ul>
+    </div>
+  </section>
 
 </body>
 
