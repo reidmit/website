@@ -81,7 +81,8 @@ a:visited {
   color: var(--color-dark);
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-primary);
 }
 
