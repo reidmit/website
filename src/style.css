@@ -131,13 +131,3 @@ a:focus {
 .link-name {
   text-decoration: underline;
 }
-
-.recent-projects {
-  font-size: 1.25em;
-  line-height: 1.5em;
-}
-
-.recent-projects li {
-  list-style-type: square;
-  margin-bottom: 16px;
-}
