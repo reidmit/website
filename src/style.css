@@ -51,7 +51,7 @@ h6 {
 
 h1 {
   font-size: 3em;
-  font-weight: 200;
+  font-weight: 300;
   margin-top: 0;
   padding-bottom: 24px;
   border-bottom: 8px solid var(--color-primary);
@@ -88,7 +88,7 @@ a:focus {
 
 .external-links {
   padding: 0;
-  text-align: left;
+  text-align: center;
   font-size: 1.4em;
   width: 240px;
   margin: 0 auto;
