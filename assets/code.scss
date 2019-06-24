@@ -20,4 +20,16 @@ code {
   .c { // comments
     color: #9a9a9a;
   }
+
+  .s { // strings
+    color: #9e2828;
+  }
+
+  .nt { // tag names
+    color: #4436e8;
+  }
+
+  .na { // attribute names
+    color: $color-accent;
+  }
 }
