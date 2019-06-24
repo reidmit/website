@@ -119,8 +119,8 @@ section + section {
 article {
   blockquote {
     border-left: $base-unit/2 solid $color-accent;
-    margin-left: $base-unit;
-    padding-left: $base-unit;
+    margin-left: 0;
+    padding-left: $base-unit * 2;
   }
 
   p {
