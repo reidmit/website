@@ -1,6 +1,6 @@
 ---
 title: Handmade Film
-description: Experiments with hand-drawn 8mm film
+description: Experiments with hand-processed 8mm film
 date: 2014-03-05
 tags:
   - film
