@@ -1,0 +1,15 @@
+title = "Reid Mitchell"
+baseURL = "https://reidmitchell.net/"
+languageCode = "en-us"
+
+disableHugoGeneratorInject = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+disableKinds = ["taxonomyTerm"]
+
+[taxonomies]
+tag = "tags"
+
+[params]
+author = "Reid Mitchell"
+description = "Personal website of Reid Mitchell, software engineer and filmmaker based in San Francisco."

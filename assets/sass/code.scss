@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 1rem;
+  background: transparentize($color-accent, 0.95);
+}
+
+.highlight {
+  pre {
+    padding: $base-unit;
+    background: transparentize($color-accent, 0.95);
+
+    code {
+      background: transparent;
+      font-size: 0.8rem;
+    }
+  }
+
+  .c { // comments
+    color: #9a9a9a;
+  }
+}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<article>
+  <h1>{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <small>
+    {{ .Date.Format "January 2, 2006" }}
+    •
+    {{ .WordCount }} words
+    •
+    tags: {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+  </small>
+</article>
+
+{{ end }}

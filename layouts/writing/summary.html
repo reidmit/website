@@ -1,0 +1,8 @@
+<article>
+  <a href="{{ .Permalink }}" class="summary">
+    <span>{{ .Title }}</span>
+    <ul>
+      {{ range sort .Params.tags }}<li class="tag">{{ . }}</li>{{ end }}
+    </ul>
+  </a>
+</article>

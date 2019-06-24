@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1>Tagged with: <span class="tag">{{ .Title | lower }}</span></h1>
+
+{{ $taggedWriting := where .Data.Pages "Type" "writing" }}
+{{ $taggedProjects := where .Data.Pages "Type" "projects" }}
+
+{{ if $taggedWriting }}
+  <h2>Writing</h2>
+  {{ range $taggedWriting }}
+    {{ .Render "summary" }}
+  {{ end }}
+{{ end }}
+
+{{ if $taggedProjects }}
+  <h2>Projects</h2>
+  {{ range $taggedProjects }}
+    {{ .Render "summary" }}
+  {{ end }}
+{{ end }}
+
+{{ end }}
