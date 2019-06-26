@@ -38,13 +38,13 @@ I'm using the static site generator [Hugo](https://gohugo.io/) to structure the 
 
 One thing that Hugo does *not* do for you is give you a way to do transformations on assets like CSS files when including them in your generated site. Hugo will happily copy any static files you have in your `/static` folder into your finished site, but it doesn't really have a plugin system or anything to help you do much with these files. However, it doesn't get in the way of you implementing your own way of transforming these files, so this isn't a major downside in my opinion.
 
-In my case, I wanted to be able to write the styles for my site in [Sass/SCSS](http://sass-lang.com/) and have these SCSS files converted into plain CSS before they were copied into my `/docs` folder.
+In my case, I wanted to be able to write the styles for my site in [Sass/SCSS](https://sass-lang.com/) and have these SCSS files converted into plain CSS before they were copied into my `/docs` folder.
 
 I'm doing this using [Gulp](https://gulpjs.com/) and the [node-sass](https://www.npmjs.com/package/node-sass) Node module. Gulp watches my `.scss` files for changes and uses node-sass to convert them into `.css` files that get put in my `/static` folder. Hugo is watching the `/static` folder for changes, and when these `.css` files get created or updated, the changes get copied into my `/docs` folder. This means that I have to have two terminal windows open while developing my site locally: one running the Gulp task, and one running the Hugo server.
 
 This setup works so well that I can just minimize these terminal windows and forget about them. I just edit the SCSS and HTML files in my text editor, and my site automatically reloads before I can even switch over to the browser to see the changes!
 
-For a great tutorial on setting this up, check out [this one](http://danbahrami.io/articles/building-a-production-website-with-hugo-and-gulp-js/), which I used to get started. You might also try to [clone my repo and build this site locally](https://github.com/reid47/website/blob/master/README.md).
+For a great tutorial on setting this up, check out [this one](https://danbahrami.io/articles/building-a-production-website-with-hugo-and-gulp-js/), which I used to get started. You might also try to [clone my repo and build this site locally](https://github.com/reid47/website/blob/master/README.md).
 
 ## Using GitHub Pages for hosting
 

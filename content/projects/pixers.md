@@ -8,7 +8,7 @@ tags:
   - canvas
 ---
 
-Pixers is a tool for creating [generative art](https://en.wikipedia.org/wiki/Generative_art), pixel-by-pixel. You define a few parameters (color palette, number of pixers, etc.) and let the pixers draw you a picture. Even when using the same settings, no two pixer drawings are alike. [Try it out!](http://pixers.reidmitchell.net/)
+Pixers is a tool for creating [generative art](https://en.wikipedia.org/wiki/Generative_art), pixel-by-pixel. You define a few parameters (color palette, number of pixers, etc.) and let the pixers draw you a picture. Even when using the same settings, no two pixer drawings are alike. [Try it out!](https://pixers.reidmitchell.net/)
 
 Here's how I described it when I first made it:
 

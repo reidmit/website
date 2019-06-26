@@ -8,7 +8,7 @@ tags:
   - canvas
 ---
 
-Redraw is a tool for making pixel art. [Try it out!](http://redraw.reidmitchell.net/)
+Redraw is a tool for making pixel art. [Try it out!](https://redraw.reidmitchell.net/)
 
 The code is all [on GitHub](https://github.com/reid47/redraw). It's written in React and uses the HTML5 canvas for drawing.
 

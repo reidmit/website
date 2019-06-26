@@ -114,10 +114,10 @@ Somewhere between your `head` tags, write this:
 And somewhere between your `body` tags again, write this:
 
 ```html
-<a href="http://www.example.com">Click me</a>
+<a href="https://www.example.com">Click me</a>
 ```
 
-Now, when you save and refresh the page in your browser, you should see that the `h1` tag gave you really large text, and that the `a` tag gave you a link! Note how we set the `href` attribute on the `a` tag to the URL of the website that we want to link to (`http://www.example.com`).
+Now, when you save and refresh the page in your browser, you should see that the `h1` tag gave you really large text, and that the `a` tag gave you a link! Note how we set the `href` attribute on the `a` tag to the URL of the website that we want to link to (`https://www.example.com`).
 
 You should also see that the browser tab/window that your webpage lives in is now called **"I love HTML"**. This is what the `title` tag does.
 
