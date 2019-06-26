@@ -4,8 +4,4 @@ rm -rf ./public
 
 hugo
 
-# cd public
-
-# git push origin gh-pages
-
-echo "todo..."
+git subtree push --prefix public origin gh-pages
