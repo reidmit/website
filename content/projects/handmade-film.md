@@ -1,5 +1,5 @@
 ---
-title: Handmade Film
+title: Handmade film
 description: Experiments with hand-processed 8mm film
 date: 2014-03-05
 tags:
@@ -8,19 +8,19 @@ tags:
   - video
 ---
 
-These three videos were shot on [Super 8mm film](https://en.wikipedia.org/wiki/Super_8_film) and hand-scratched/hand-colored to create the effects you see. I made them for a class called Handmade Film, in which we were encouraged to experiment with different ways to intervene upon the film before and after developing it.
+These three videos were made on [Super 8mm film](https://en.wikipedia.org/wiki/Super_8_film) and hand-developed/hand-scratched/hand-colored. I made them for a class called Handmade Film, in which we were encouraged to experiment with different ways to intervene upon the film before and after developing it.
 
 The process generally involved shooting some footage, developing it in a darkroom, cutting/rearranging/scratching the film strips somehow, digitizing the footage with a [telecine](https://en.wikipedia.org/wiki/Telecine) machine, and then doing final editing and sound design with Adobe Premiere. I had never done anything quite like this before, and I had a ton of fun making mistakes in the process. I ended up with three pieces that I'm proud of.
 
 ## Evolution
 
-For my first one, the film broke inside the camera while I was shooting. This ruined most of the footage, but the salvageable parts had some really interesting double-exposures. Since I couldn't use most of what I shot, I abandoned my original plan and turned it into a meditation on adapting to overcome obstacles.
+While shooting my first project, the film broke inside the camera. This ruined most of the footage, but the salvageable parts had some really interesting double-exposures. Since I couldn't use most of what I shot, I abandoned my original plan and turned it into a meditation on adapting to overcome obstacles.
 
 {{< vimeo-4x3 88318673 >}}
 
 ## Erasure
 
-For my second project, I wanted to explore more hand-scratching and hand-coloring. This one required many hours hunched over the tiny 8mm film strips, scratching with needles and drawing with markers. When each frame is so small, it's tough to know if what you're doing is going to turn out well until you're done. But it mostly worked out! Plus, my footage came out pretty well, so I could tell the story I'd envisioned.
+For my second film, I wanted to explore more hand-scratching and hand-coloring. This one required many hours hunched over the tiny 8mm film strips, scratching with needles and drawing with markers. When each frame is so small, it's tough to know if what you're doing is going to turn out well until you're done. But it mostly worked out! Plus, my footage came out pretty clear, so I could tell the story I'd envisioned.
 
 {{< vimeo-4x3 88865721 >}}
 

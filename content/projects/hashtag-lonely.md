@@ -12,7 +12,7 @@ I built a robot that complains on Twitter until you pay attention to it. When yo
 
 The robot is powered by an Arduino running some [Processing](https://processing.org/) code that uses [OpenCV](https://github.com/atduskgreg/opencv-processing) for face detection and the Twitter API for posting online.
 
-This was my final project for a class called "Robotics, Digital Media, & the Environment." We showed our work in a student gallery at the end of the semester, which is where the video below was shot. You can see its real tweets here: [@hashtag_lonely](https://twitter.com/hashtag_lonely).
+This was my final project for a class called Robotics, Digital Media, & the Environment. We showed our work in a student gallery at the end of the semester, which is where the video below was shot. You can see its real tweets here: [@hashtag_lonely](https://twitter.com/hashtag_lonely).
 
 {{< vimeo-16x9 93522322 >}}
 

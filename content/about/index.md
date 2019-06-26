@@ -2,7 +2,7 @@
 title: About me
 ---
 
-I’m a software engineer and filmmaker currently living in San Francisco. I’m passionate about creating things that make people’s lives a little easier or a little more fun. My pronouns are he/him/his.
+I’m a software engineer and filmmaker currently living in San Francisco. I’m passionate about education, accessibility, and building experiences that make people's lives a little easier or a little more enjoyable. My pronouns are he/him/his.
 
 These days, I’m especially interested in front-end web development (JavaScript, React, etc), building accessible user interfaces, and programming language design (compiler-writing, type-checking, etc).
 
