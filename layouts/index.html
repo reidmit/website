@@ -11,12 +11,12 @@
 
 <h2>Recent writing</h2>
 {{ range first 5 (where .Pages "Type" "writing") }}
-  {{ .Render "summary" }}
+{{ .Render "summary" }}
 {{ end }}
 
 <h2>Recent projects</h2>
 {{ range first 5 (where .Pages "Type" "projects") }}
-  {{ .Render "summary" }}
+{{ .Render "summary" }}
 {{ end }}
 
 {{ end }}

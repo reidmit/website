@@ -6,17 +6,17 @@
 {{ $taggedProjects := where .Data.Pages "Type" "projects" }}
 
 {{ if $taggedWriting }}
-  <h2>Writing</h2>
-  {{ range $taggedWriting }}
-    {{ .Render "summary" }}
-  {{ end }}
+<h2>Writing</h2>
+{{ range $taggedWriting }}
+{{ .Render "summary" }}
+{{ end }}
 {{ end }}
 
 {{ if $taggedProjects }}
-  <h2>Projects</h2>
-  {{ range $taggedProjects }}
-    {{ .Render "summary" }}
-  {{ end }}
+<h2>Projects</h2>
+{{ range $taggedProjects }}
+{{ .Render "summary" }}
+{{ end }}
 {{ end }}
 
 {{ end }}
