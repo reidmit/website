@@ -17,5 +17,5 @@ hugo server
 To build:
 
 ```
-hugo build
+hugo
 ```
