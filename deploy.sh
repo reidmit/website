@@ -13,7 +13,8 @@ git ci -m "Deploy! ($currentDate)"
 
 echo "Pushing ./public to gh-pages branch..."
 git branch -D gh-pages || true
-git subtree push --prefix public origin gh-pages
+sha=`git subtree split --prefix public master`
+git push origin $sha:gh-pages --force
 
 echo "Undoing deploy commit..."
 git reset HEAD^
