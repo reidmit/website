@@ -16,11 +16,15 @@ git pull origin-temp gh-pages
 git checkout gh-pages
 popd
 
+echo "Cleaning out ./public directory again..."
+rm -rf ./public/**
+
 echo "Building site..."
 hugo
 
 echo "Committing & pushing changes..."
 pushd ./public
+git add -N .
 git commit -am "$message" && git push origin-temp gh-pages:gh-pages --force
 rm -rf ./.git
 popd
