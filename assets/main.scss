@@ -180,7 +180,7 @@ img {
 
 .tag {
   list-style-type: none;
-  font-weight: normal;
+  font-weight: inherit;
 
   &::before {
     content: '#';

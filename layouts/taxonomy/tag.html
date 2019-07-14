@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1>Tagged with: <span class="tag">{{ .Title | lower }}</span></h1>
+<h1>Tagged with <span class="tag">{{ .Title | lower }}</span></h1>
 
 {{ $taggedWriting := where .Data.Pages "Type" "writing" }}
 {{ $taggedProjects := where .Data.Pages "Type" "projects" }}
