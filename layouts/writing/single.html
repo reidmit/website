@@ -15,4 +15,24 @@
   {{ .Content }}
 </article>
 
+<footer>
+  {{ if .PrevInSection }}
+  <a class="prev-link" href="{{ .PrevInSection.URL }}">
+    <div>previous:</div>
+    <b>{{ .PrevInSection.Title }}</b>
+  </a>
+  {{ else }}
+  <div class="prev-link"></div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+  <a class="next-link" href="{{ .NextInSection.URL }}">
+    <div>next:</div>
+    <b>{{ .NextInSection.Title}}</b>
+  </a>
+  {{ else }}
+  <div class="next-link"></div>
+  {{ end }}
+</footer>
+
 {{ end }}

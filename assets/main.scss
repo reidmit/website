@@ -192,3 +192,22 @@ img {
     border: none;
   }
 }
+
+footer {
+  margin-top: $base-unit * 4;
+  display: flex;
+  justify-content: space-between;
+
+  .next-link,
+  .prev-link {
+    width: 50%;
+    border: none;
+    padding: $base-unit * 2;
+    border-radius: $base-unit/2;
+    align-items: center;
+  }
+
+  .next-link {
+    text-align: right;
+  }
+}
