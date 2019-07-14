@@ -53,6 +53,11 @@ a:visited {
   }
 }
 
+ul,
+ol {
+  padding-left: $base-unit * 3;
+}
+
 nav {
   width: 100%;
   padding: ($base-unit * 2) ($base-unit);
@@ -195,6 +200,8 @@ img {
 
 footer {
   margin-top: $base-unit * 4;
+  margin-left: -$base-unit;
+  margin-right: -$base-unit;
   display: flex;
   justify-content: space-between;
 
@@ -202,7 +209,7 @@ footer {
   .prev-link {
     width: 50%;
     border: none;
-    padding: $base-unit * 2;
+    padding: $base-unit;
     border-radius: $base-unit/2;
     align-items: center;
   }
