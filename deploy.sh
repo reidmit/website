@@ -1,6 +1,6 @@
 #/usr/bin bash
 
-origin="https://github.com/reid47/website.git"
+origin="git@github.com:reid47/website.git"
 date=`date`
 message="Deploy! ($date)"
 
