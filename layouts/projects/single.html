@@ -17,7 +17,7 @@
 
 <footer>
   {{ if .PrevInSection }}
-  <a class="prev-link" href="{{ .PrevInSection.URL }}">
+  <a class="prev-link" href="{{ .PrevInSection.Permalink }}">
     <div>previous:</div>
     <b>{{ .PrevInSection.Title }}</b>
   </a>
@@ -26,7 +26,7 @@
   {{ end }}
 
   {{ if .NextInSection }}
-  <a class="next-link" href="{{ .NextInSection.URL }}">
+  <a class="next-link" href="{{ .NextInSection.Permalink }}">
     <div>next:</div>
     <b>{{ .NextInSection.Title}}</b>
   </a>
