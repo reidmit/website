@@ -21,6 +21,7 @@
     ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 
+  <!-- <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
   {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
@@ -42,15 +43,16 @@
       <a href="/">{{ .Site.Title }}</a>
     </h1>
 
+    <div class="flex-spacer"></div>
+
     <ul>
       <li><a href="/writing/">writing</a></li>
       <li><a href="/projects/">projects</a></li>
       <li><a href="/about/">about</a></li>
     </ul>
 
-    <div class="flex-spacer"></div>
 
-    <ul class="social">
+    <!-- <ul class="social">
       <li>
         <a href="https://twitter.com/reidmit" target="_blank" rel="noreferrer">twitter</a>
       </li>
@@ -60,7 +62,7 @@
       <li>
         <a href="https://linkedin.com/in/reidmitchell" target="_blank" rel="noreferrer">linkedin</a>
       </li>
-    </ul>
+    </ul> -->
   </nav>
 
   <div class="main-wrapper">

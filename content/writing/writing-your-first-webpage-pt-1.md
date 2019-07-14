@@ -1,6 +1,7 @@
 ---
-title: "Writing your first webpage, pt. 1: HTML"
+title: 'Writing your first webpage, pt. 1: HTML'
 date: 2017-12-04T17:19:16-08:00
+draft: true
 tags:
   - html
   - web design
@@ -71,8 +72,7 @@ At this point, your file should look something like this:
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
+  <head></head>
   <body>
     Hello, world! This is my website!
   </body>
@@ -123,12 +123,10 @@ You should also see that the browser tab/window that your webpage lives in is no
 
 There are lots of HTML tags out there that do different things. Try out `<button></button>`, `<textarea></textarea>`, or `<i></i>`. I encourage you to experiment with new tags and different combinations of tags!
 
-
 A full list of tags can be found on [w3schools](https://www.w3schools.com/tags/default.asp), which also has a lot of great information about HTML in general.
-
 
 ## Looking ahead
 
-We focused on HTML in this post, which is important to start with because it's the backbone of any website. But there's a lot more that we can do to make our websites look interesting once we learn CSS. Stay tuned for **part 2: CSS**,  coming soon!
+We focused on HTML in this post, which is important to start with because it's the backbone of any website. But there's a lot more that we can do to make our websites look interesting once we learn CSS. Stay tuned for **part 2: CSS**, coming soon!
 
 You might also be wondering how you can share your new website with other people. At the moment, your website just lives on your computer, so there is no way for you to send them a link and have them open it up on their computer. However, look out for a future post where we'll explore how to put your website out into the wild for all to see!

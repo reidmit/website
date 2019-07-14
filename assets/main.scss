@@ -1,12 +1,18 @@
-@import "./variables.scss";
-@import "./code.scss";
+@import './variables.scss';
+@import './code.scss';
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html,
+body {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  //   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 100%;
   font-size: 100%;
 }
@@ -14,7 +20,6 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
   background: $color-light;
 }
 
@@ -22,49 +27,44 @@ h1 {
   font-size: 2rem;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: $color-dark;
   text-decoration: none;
   border-bottom: 2px solid $color-accent;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: transparentize($color-accent, 0.8);
   }
 }
 
 nav {
-  flex-shrink: 0;
-  width: $base-unit * 20;
-  padding: $base-unit * 2;
+  width: 100%;
+  padding: ($base-unit * 2) ($base-unit);
   background: $color-dark;
   color: $color-light;
   display: flex;
-  flex-direction: column;
 
   h1 {
     text-transform: lowercase;
     margin: 0;
-    margin-bottom: $base-unit;
-    font-size: 2.05rem;
-    width: 50%;
-
-    a, a:hover, a:focus {
-      background-color: transparent;
-    }
+    font-size: inherit;
+    font-weight: inherit;
   }
 
-  hr {
-    border-style: solid;
-    border-width: $base-unit / 4;
-    border-color: $color-accent;
-    border-radius: $base-unit / 4;
-  }
-
-  a, a:visited {
+  a,
+  a:visited {
     color: $color-light;
     text-decoration: none;
-    display: block;
     border: 0;
+    padding: $base-unit;
+    border-radius: $base-unit / 4;
+
+    &:hover,
+    &:focus {
+      background: $color-accent;
+    }
   }
 
   ul {
@@ -75,17 +75,7 @@ nav {
   li {
     list-style-type: none;
     font-size: 1rem;
-
-    a {
-      padding: $base-unit;
-      margin-left: -$base-unit;
-      margin-right: -$base-unit;
-      border-radius: $base-unit / 4;
-
-      &:hover, &:focus {
-        background: $color-accent;
-      }
-    }
+    display: inline-block;
   }
 }
 

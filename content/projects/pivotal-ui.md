@@ -12,11 +12,13 @@ For the first year and a half of my job at Pivotal, I worked on the team that ma
 
 The library is open source, written in React and CSS, and can be found [on GitHub](https://github.com/pivotal-cf/pivotal-ui). The documentation, plus examples of the components in use, can be found in our [style guide](https://styleguide.pivotal.io/).
 
+This was such a fun project to work on, and I cannot overstate how much I learned.
+
 ![screenshot Pivotal UI style guide](/images/pivotal-ui.png)
 
 ## Learning to build and use a design system
 
-This was such a fun project to work on, and I cannot overstate how much I learned. Prior to joining Pivotal, I had done a lot of front-end web development in HTML and CSS, but I had never worked with React.
+Prior to joining Pivotal, I had done a lot of front-end web development in HTML and CSS, but I had never worked with React.
 
 On this team, I got to hit the ground running as both an author and a consumer of our library (since my team also maintained a React app that used the design system). I learned what design systems are, why they're useful, and how hard it can be to drive usage and consistency across lots of teams with different requirements and priorities.
 
