@@ -8,6 +8,6 @@ These days, I’m especially interested in front-end web development (JavaScript
 
 Prior to entering the real world, I grew up in a suburb of New York and went to school at Pomona College, where I majored in computer science and media studies.
 
-I currently work at Pivotal Software, where I'm helping to build [Cloud Foundry](https://www.cloudfoundry.org/). Before that, I worked at Microsoft.
+I currently work at Pivotal Software, where I'm helping to build [Cloud Foundry](https://www.cloudfoundry.org/). Before that, I worked on data migration tools at Microsoft.
 
 If you'd like to get in touch, feel free to reach out on [Twitter](https://twitter.com/reidmit) or [LinkedIn](https://linkedin.com/in/reidmitchell)!
