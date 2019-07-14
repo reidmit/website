@@ -1,17 +1,18 @@
 {{ define "main" }}
 
 <article>
-  <h1>{{ .Title }}</h1>
+  <header>
+    <h1>{{ .Title }}</h1>
+
+    <small>
+      <span class="article-date">{{ .Date.Format "January, 2006" }}</span>
+      <nav class="article-tags" aria-label="Tags">
+        {{ range sort .Params.tags }} <a class="tag inline" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}
+      </nav>
+    </small>
+  </header>
 
   {{ .Content }}
-
-  <small>
-    {{ .Date.Format "January 2, 2006" }}
-    •
-    {{ .WordCount }} words
-    •
-    tags: {{ range .Params.tags }}<a href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
-  </small>
 </article>
 
 {{ end }}

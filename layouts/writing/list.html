@@ -1,9 +1,9 @@
 {{ define "main" }}
 
-<h1>Writing</h1>
+<h1 class="list-heading">Writing</h1>
 
 {{ range .Pages }}
-  {{ .Render "summary" }}
+{{ .Render "summary" }}
 {{ end }}
 
 {{ end }}

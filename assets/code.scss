@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -16,20 +16,26 @@ code {
       font-size: 0.8rem;
     }
   }
+}
 
-  .c { // comments
+.light .highlight {
+  .c {
+    // comments
     color: #9a9a9a;
   }
 
-  .s { // strings
+  .s {
+    // strings
     color: #9e2828;
   }
 
-  .nt { // tag names
+  .nt {
+    // tag names
     color: #4436e8;
   }
 
-  .na { // attribute names
+  .na {
+    // attribute names
     color: $color-accent;
   }
 }

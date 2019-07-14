@@ -21,8 +21,7 @@
     ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 
-  <!-- <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
   {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
@@ -38,7 +37,33 @@
 </head>
 
 <body>
-  <nav role="navigation">
+  <script>
+    var body = document.body, lightswitch, label;
+    var theme = localStorage.getItem('theme') || 'light';
+    body.className = theme;
+
+    function setLabel(theme) {
+      label = label || document.getElementById('lightswitch-label');
+      label.innerText = theme === 'dark' ? 'off' : 'on';
+    }
+
+    function toggleLights(evt) {
+      evt.preventDefault();
+
+      var nextTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+      body.className = nextTheme;
+      setLabel(nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLabel(theme);
+      lightswitch = lightswitch || document.getElementById('lightswitch');
+      lightswitch.addEventListener('click', toggleLights);
+    })
+  </script>
+
+  <nav role="navigation" class="primary-nav">
     <h1 class="site-title">
       <a href="/">{{ .Site.Title }}</a>
     </h1>
@@ -46,28 +71,14 @@
     <div class="flex-spacer"></div>
 
     <ul>
-      <li><a href="/writing/">writing</a></li>
       <li><a href="/projects/">projects</a></li>
+      <li><a href="/writing/">writing</a></li>
       <li><a href="/about/">about</a></li>
+      <li><a href="#" id="lightswitch" role="button">lights: <span id="lightswitch-label">on</span></a></li>
     </ul>
-
-
-    <!-- <ul class="social">
-      <li>
-        <a href="https://twitter.com/reidmit" target="_blank" rel="noreferrer">twitter</a>
-      </li>
-      <li>
-        <a href="https://github.com/reid47" target="_blank" rel="noreferrer">github</a>
-      </li>
-      <li>
-        <a href="https://linkedin.com/in/reidmitchell" target="_blank" rel="noreferrer">linkedin</a>
-      </li>
-    </ul> -->
   </nav>
 
-  <div class="main-wrapper">
-    <main>{{ block "main" . }}{{ end }}</main>
-  </div>
+  <main>{{ block "main" . }}{{ end }}</main>
 </body>
 
 </html>
