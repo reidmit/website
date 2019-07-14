@@ -1,23 +1,29 @@
 #/usr/bin bash
 
+origin="https://github.com/reid47/website.git"
+date=`date`
+message="Deploy! ($date)"
+
 echo "Cleaning out ./public directory..."
 rm -rf ./public/**
+
+echo "Pulling in remote changes..."
+pushd ./public
+rm .gitkeep
+git init .
+git remote add origin-temp $origin
+git pull origin-temp gh-pages
+git checkout gh-pages
+popd
 
 echo "Building site..."
 hugo
 
-echo "Committing ./public changes..."
-git add public
-currentDate=`date`
-git ci -m "Deploy! ($currentDate)"
-
-echo "Pushing ./public to gh-pages branch..."
-git pull origin gh-pages
-sha=`git subtree split --prefix public master`
-git push origin $sha:gh-pages --force
-
-echo "Undoing deploy commit..."
-git reset HEAD^
+echo "Committing & pushing changes..."
+pushd ./public
+git commit -am "$message" && git push origin-temp gh-pages:gh-pages --force
+rm -rf ./.git
+popd
 
 echo "Cleaning out ./public directory again..."
 rm -rf ./public/**
