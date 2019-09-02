@@ -19,3 +19,9 @@ To build:
 ```
 hugo
 ```
+
+To deploy:
+
+```
+./deploy.sh
+```
