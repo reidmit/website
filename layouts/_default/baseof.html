@@ -42,13 +42,18 @@
 
 <body>
   <script>
-    var body = document.body, lightswitch, label;
+    var body = document.body, lightswitch;
     var theme = localStorage.getItem('theme') || 'light';
     body.className = theme;
 
     function setLabel(theme) {
-      label = label || document.getElementById('lightswitch-label');
-      label.innerText = theme === 'dark' ? 'off' : 'on';
+      if (theme === 'dark') {
+        lightswitch.setAttribute('aria-label', 'Turn off dark mode');
+        lightswitch.classList.add('dark');
+      } else {
+        lightswitch.setAttribute('aria-label', 'Turn on dark mode');
+        lightswitch.classList.remove('dark');
+      }
     }
 
     function toggleLights(evt) {
@@ -60,10 +65,10 @@
       localStorage.setItem('theme', nextTheme);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      setLabel(theme);
+    document.addEventListener('DOMContentLoaded', function () {
       lightswitch = lightswitch || document.getElementById('lightswitch');
       lightswitch.addEventListener('click', toggleLights);
+      setLabel(theme);
     })
   </script>
 
@@ -78,7 +83,7 @@
       <li><a href="/projects/">projects</a></li>
       <li><a href="/writing/">writing</a></li>
       <li><a href="/about/">about</a></li>
-      <li><a href="#" id="lightswitch" role="button">lights: <span id="lightswitch-label">on</span></a></li>
+      <li><a href="#" id="lightswitch" role="button"></a></li>
     </ul>
   </nav>
 
