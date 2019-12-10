@@ -2,6 +2,8 @@
 title: Pixers
 description: A generative art project in JavaScript
 date: 2015-01-03
+banner_large: /images/pixers-banner-large.png
+layout: case-study
 tags:
   - javascript
   - generative art

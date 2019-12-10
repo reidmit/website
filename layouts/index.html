@@ -3,7 +3,7 @@
 <h1>Hi, I'm Reid!</h1>
 
 <p>
-  I’m a software engineer and filmmaker based in San Francisco.
+  I’m a software engineer, designer, and filmmaker based in San Francisco.
   I’m passionate about education, accessibility, and building experiences
   that make people's lives a little easier or a little more enjoyable.
   <a href="/about">Learn more...</a>
@@ -11,11 +11,6 @@
 
 <h2>Recent projects</h2>
 {{ range first 3 (where .Pages "Type" "projects") }}
-{{ .Render "summary" }}
-{{ end }}
-
-<h2>Recent writing</h2>
-{{ range first 3 (where .Pages "Type" "writing") }}
 {{ .Render "summary" }}
 {{ end }}
 

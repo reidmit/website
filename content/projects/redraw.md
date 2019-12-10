@@ -20,4 +20,4 @@ After spending a bunch of time playing with and admiring these apps, I got the u
 
 You can cut/copy/paste, undo/redo, zoom, save a selected part of your drawing, choose colors with the eyedropper tool, and more. Your canvas is saved in local storage, so you can pick up where you left off after refreshing or navigating away from the page. And you can save as either PNG or SVG. As a fun test, I drew all the icons you see on the buttons using the app itself.
 
-Give it a shot. I'd love to see any drawings you make it with it!
+[Give it a shot](https://redraw.reidmitchell.net/). I'd love to see any drawings you make it with it!

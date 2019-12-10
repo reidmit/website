@@ -1,0 +1,44 @@
+{{ define "banner" }}
+{{ if .Params.banner_large }}
+<img class="banner" src="{{ .Params.banner_large }}" />
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+<article>
+  <header>
+
+    <h1>{{ .Title }}</h1>
+
+    <small>
+      <span class="article-date">{{ .Date.Format "January 2006" }}</span>
+      <nav class="article-tags" aria-label="Tags">
+        {{ range sort .Params.tags }} <a class="tag inline" href="/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}
+      </nav>
+    </small>
+  </header>
+
+  {{ .Content }}
+</article>
+
+<footer>
+  {{ if .PrevInSection }}
+  <a class="prev-link" href="{{ .PrevInSection.Permalink }}">
+    <div>previous:</div>
+    <b>{{ .PrevInSection.Title }}</b>
+  </a>
+  {{ else }}
+  <div class="prev-link"></div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+  <a class="next-link" href="{{ .NextInSection.Permalink }}">
+    <div>next:</div>
+    <b>{{ .NextInSection.Title}}</b>
+  </a>
+  {{ else }}
+  <div class="next-link"></div>
+  {{ end }}
+</footer>
+
+{{ end }}

@@ -28,6 +28,10 @@ body {
   }
 }
 
+header {
+  position: relative;
+}
+
 #lightswitch {
   background-image: url('icons/sun.svg');
   background-repeat: no-repeat;
@@ -208,6 +212,11 @@ img {
     text-decoration: none;
     border: none;
   }
+}
+
+.banner {
+  width: 100%;
+  margin: 0;
 }
 
 footer {
