@@ -2,7 +2,7 @@
 title: About me
 ---
 
-Hi, I'm Reid! I’m a software engineer, designer, and filmmaker currently living in San Francisco. I’m passionate about education, accessibility, and building experiences that make people's lives a little easier or a little more enjoyable. My pronouns are he/him/his.
+Hi, I'm Reid! I’m a software engineer, UX designer, and filmmaker currently living in San Francisco. I’m passionate about education, accessibility, and building experiences that make people's lives a little easier or a little more enjoyable. My pronouns are he/him/his.
 
 These days, I’m especially interested in front-end web development (JavaScript, React, etc), building accessible user interfaces, and programming language design (compiler-writing, type-checking, etc).
 

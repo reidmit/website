@@ -10,7 +10,7 @@ Asynchronous programming comes up a lot when you hear about JavaScript. You may 
 
 ## Defining some terms
 
-If you've never heard the word "asynchronous," that's okay, too! Let's start by defining it's opposite, "synchronous."
+If you've never heard the word "asynchronous," that's okay, too! Let's start by defining its opposite, "synchronous."
 
 A **synchronous** series of events is one that happens in a clearly defined order. Only one event ever happens at a time, and the next event does not start until the previous event has finished.
 
@@ -64,11 +64,11 @@ Now, this coffee shop is operating **asynchronously**. Some things don't change:
 
 That last point is important: if a particular order is slow for some reason (maybe they wanted almond milk, which is kept in the back room), other orders are **not blocked** by it. Other baristas can continue working while one of them runs to the back room. In the synchronous example, the whole line would have to wait for Sarah to go get the almond milk for the person at the front.
 
-This is good news for Sarah, but it becomes a little trickier to mode this scenario in JavaScript. Let's explore a few ways.
+This is good news for Sarah, but it becomes a little trickier to model this scenario in JavaScript. Let's explore a few ways.
 
 ### Using callbacks
 
-The oldest way that people did asynchronous programming in JavaScript was using **callbacks**. This refers to the pattern of passing a function (the callback) as an argument to an asynchronous function. When the asynchronous function completes, it will call the callback function with the result.
+The original way to do asynchronous programming in JavaScript was using **callbacks**. This refers to the pattern of passing a function (the callback) as an argument to an asynchronous function. When the asynchronous function completes, it will call the callback function with the result.
 
 Here's what it looks like:
 
@@ -79,8 +79,8 @@ while (queue.length > 0) {
 }
 
 function handleCustomer(customer) {
-  takeOrder(customer, (order) => {
-    fillCup(order, (cup) => {
+  takeOrder(customer, order => {
+    fillCup(order, cup => {
       serveCustomer(customer, cup);
     });
   });
@@ -89,7 +89,7 @@ function handleCustomer(customer) {
 
 Previously, our `takeOrder` function received a `customer` as an argument and returned an `order`. This made sense when `takeOrder` was always performed by the same person, so we had to block the rest of the loop until `takeOrder` was done.
 
-But now, with multiple baristas, we know that `takeOrder` is asynchronous. It should not block the whole loop. We achieve that by moving the following steps into nested callback functions. Now, `takeOrder` does not actually return a value: instead, it passes it's "return value" (the `order`) as an argument to its callback. The same applies for `fillCup`.
+But now, with multiple baristas, we know that `takeOrder` should not block the whole loop. We achieve that by moving the following steps into nested callback functions. Now, `takeOrder` does not actually return a value: instead, it passes its "return value" (the `order`) as an argument to its callback. The same applies for `fillCup`.
 
 By using asynchronous functions with callbacks, we can make sure that the sequence of events is still the same for each customer (`takeOrder`, then `fillCup`, then `serveCustomer`), but all the baristas can be busy working on orders at the same time.
 
@@ -105,8 +105,8 @@ while (queue.length > 0) {
 
 function handleCustomer(customer) {
   try {
-    takeOrder(customer, (order) => {
-      fillCup(order, (cup) => {
+    takeOrder(customer, order => {
+      fillCup(order, cup => {
         serveCustomer(customer, cup);
       });
     });
@@ -145,7 +145,7 @@ function handleCustomer(customer) {
 }
 ```
 
-Now, each callback function expects two arguments: an error from the previous step, and the "return value" from the previous step. If the error is defined, it means something went wrong, so we `apologizeToCustomer` and return early, without calling the next function in the sequence.
+Now, each callback function expects two arguments: an error from the previous step, and the "return value" from the previous step. If the error is defined, it means something went wrong, so we `apologizeToCustomer` and return early without calling the next function in the sequence.
 
 Just like asynchronous functions using callbacks **do not return any values**, they also **do not throw any errors**. Instead, they just pass these things into their callback function to be handled at the next step.
 
@@ -197,7 +197,7 @@ async function handleCustomer(customer) {
   try {
     const order = await takeOrder(customer);
     const cup = await fillCup(order);
-    serveCustomer(customer, cup);
+    await serveCustomer(customer, cup);
   } catch (error) {
     apologizeToCustomer(customer, error);
   }
@@ -216,7 +216,7 @@ It's natural to wonder why any of this would be useful. Why introduce all this c
 
 There are places where asynchronous programming makes a lot of sense. In our coffee shop example, it didn't make sense for Sarah to be the only one handling all of those customers, since it meant that every customer had to wait for Sarah to complete all the steps for all the customers before them in order to
 
-Likewise, **we often don't want to block the execution of our code** while we're waiting for some function to return. For example, on a page in a web app, we might make a request to an API to fetch the data for a graph. We don't know how long it will take for the request to finish, and we have more work to do. We have to render the rest of the page, maybe with an empty graph for now, and we want it to be interactive as soon as possible (so buttons work, and the page doesn't feel frozen). We want to say, "fill in the graph whenever we get the data, but keep doing everything else in the meantime." Asynchronous programming lets us do that.
+Likewise, **we often don't want to block the execution of our code** while we're waiting for some function to return. For example, on a page in a web app, we might make a request to an API to fetch the data for a graph. We don't know how long it will take for the request to finish, and we have more work to do. We have to render the rest of the page, maybe with an empty graph for now, and we want it to be interactive as soon as possible (so the page doesn't feel frozen). We want to say, "fill in the graph whenever we get the data, but keep doing everything else in the meantime." Asynchronous programming lets us do that.
 
 This is especially important with things like network requests, since we can't be sure how long they will take: What if your internet connection is slow or flaky? Using asynchronous functions lets us schedule some work to be done whenever the request completes, but doesn't block the rest of our code on it.
 
