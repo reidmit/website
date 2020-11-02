@@ -25,7 +25,7 @@ hugo
 echo "Committing & pushing changes..."
 pushd ./public
 git add -N .
-git commit -am "$message" && git push origin-temp gh-pages:gh-pages --force
+git commit -am "$message" && git push origin-temp gh-pages:gh-pages
 rm -rf ./.git
 popd
 
