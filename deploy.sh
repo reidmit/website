@@ -1,4 +1,4 @@
-#/usr/bin bash
+#/usr/bin/env bash
 
 origin="git@github.com:reid47/website.git"
 date=`date`
