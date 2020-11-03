@@ -11,13 +11,13 @@
 
 <h2>Recent projects</h2>
 
-{{ range first 3 (where .Pages "Type" "projects") }}
+{{ range first 3 (where .Site.RegularPages "Type" "projects") }}
 {{ .Render "summary" }}
 {{ end }}
 
 <h2>Recent writing</h2>
 
-{{ range first 3 (where .Pages "Type" "writing") }}
+{{ range first 3 (where .Site.RegularPages "Type" "writing") }}
 {{ .Render "summary" }}
 {{ end }}
 
