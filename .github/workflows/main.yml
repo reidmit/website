@@ -28,3 +28,5 @@ jobs:
           build_dir: public
           keep_history: true
           jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
