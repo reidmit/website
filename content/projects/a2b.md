@@ -2,9 +2,6 @@
 title: A2B
 description: Mobile travel app UX/UI design
 date: 2019-09-01
-banner_large: /images/a2b-banner-large.png
-thumb: /images/a2b-thumb.png
-layout: case-study
 tags:
   - app
   - design
