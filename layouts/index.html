@@ -10,7 +10,14 @@
 </p>
 
 <h2>Recent projects</h2>
+
 {{ range first 3 (where .Pages "Type" "projects") }}
+{{ .Render "summary" }}
+{{ end }}
+
+<h2>Recent writing</h2>
+
+{{ range first 3 (where .Pages "Type" "writing") }}
 {{ .Render "summary" }}
 {{ end }}
 
