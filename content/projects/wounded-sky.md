@@ -10,7 +10,7 @@ tags:
 
 I made this music video for Ruby Reilly's original song "Wounded Sky." Check out more of Ruby's music [here](https://rubyreilly.bandcamp.com/).
 
-{{< vimeo-4x3 57974310 >}}
+{{< youtube bcTN_bcYFJM >}}
 
 Ruby is from my hometown. I was home from college for Christmas break, I had recently acquired a Super 8mm film camera from a garage sale, and I loved Ruby's music. I felt this song especially could fit with the analog film aesthetic, so we set out to make this video happen.
 
