@@ -1,24 +1,9 @@
 {{ define "main" }}
 
-<h1>Hi, I'm Reid!</h1>
-
-<p>
-  I’m a software engineer, designer, and filmmaker based in San Francisco.
-  I’m passionate about education, accessibility, and building experiences
-  that make people's lives a little easier or a little more enjoyable.
-  <a href="/about">Learn more...</a>
-</p>
-
-<h2>Recent projects</h2>
-
-{{ range first 3 (where .Site.RegularPages "Type" "projects") }}
-{{ .Render "summary" }}
-{{ end }}
-
-<h2>Recent writing</h2>
-
-{{ range first 3 (where .Site.RegularPages "Type" "writing") }}
-{{ .Render "summary" }}
-{{ end }}
+<div id="home-video-wrapper">
+  <video autoplay muted loop id="home-video" poster="images/window.jpg">
+    <source src="images/window.mp4" type="video/mp4">
+  </video>
+</div>
 
 {{ end }}
