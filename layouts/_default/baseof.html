@@ -11,9 +11,7 @@
       content="software, engineer, film, filmmaker, portfolio, design, code, user experience, user interface, ux design, reidmit"
     />
 
-    <title>
-      {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-    </title>
+    <title>{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="canonical" href="{{ .Permalink }}" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -22,19 +20,13 @@
     <link rel="%s" type="%s" href="%s" title="%s" />
     ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
-      rel="stylesheet"
-    />
-    {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify
-    | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+
+    {{ $css := resources.Get "main.scss" | resources.ToCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ ($css | resources.Fingerprint).Permalink }}" />
 
     {{ if (not .Site.IsServer) }}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -55,10 +47,14 @@
 
       function setLabel(theme) {
         if (theme === "dark") {
-          lightswitch.setAttribute("aria-label", "Turn off dark mode");
+          const label = "Turn off dark mode";
+          lightswitch.setAttribute("aria-label", label);
+          lightswitch.setAttribute("title", label);
           lightswitch.classList.add("dark");
         } else {
-          lightswitch.setAttribute("aria-label", "Turn on dark mode");
+          const label = "Turn on dark mode";
+          lightswitch.setAttribute("aria-label", label);
+          lightswitch.setAttribute("title", label);
           lightswitch.classList.remove("dark");
         }
       }
@@ -66,8 +62,7 @@
       function toggleLights(evt) {
         evt.preventDefault();
 
-        var nextTheme =
-          localStorage.getItem("theme") === "dark" ? "light" : "dark";
+        var nextTheme = localStorage.getItem("theme") === "dark" ? "light" : "dark";
         body.className = nextTheme;
         setLabel(nextTheme);
         localStorage.setItem("theme", nextTheme);
@@ -88,9 +83,6 @@
       <div class="flex-spacer"></div>
 
       <ul>
-        <li><a href="/projects/">projects</a></li>
-        <li><a href="/writing/">writing</a></li>
-        <li><a href="/about/">about</a></li>
         <li><a href="#" id="lightswitch" role="button"></a></li>
       </ul>
     </nav>

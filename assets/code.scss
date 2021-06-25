@@ -1,7 +1,7 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 1rem;
   background: transparentize($color-accent, 0.95);
 }
