@@ -1,6 +1,6 @@
-# reidmitchell.net
+# reidmit.com
 
-My personal website, live at [reidmitchell.net](https://reidmitchell.net).
+My personal website, live at [reidmit.com](https://reidmit.com).
 
 If you're curious, feel free to poke around the source code!
 
@@ -19,4 +19,3 @@ To build:
 ```
 hugo
 ```
-
