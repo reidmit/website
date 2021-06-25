@@ -10,4 +10,4 @@ Prior to entering the real world, I grew up in a suburb of New York and went to 
 
 I work at [Khan Academy](https://www.khanacademy.org/), where I'm helping to provide a free, world-class education to anyone, anywhere. Previously, I worked on [Cloud Foundry](https://www.cloudfoundry.org/) at Pivotal Software/VMware. Before that, I worked on data migration tools at Microsoft.
 
-If you'd like to get in touch, I'd love to hear from you. Feel free to reach out on [Twitter](https://twitter.com/reidmit) or [LinkedIn](https://linkedin.com/in/reidmitchell).
+If you'd like to get in touch, I'd love to hear from you. Feel free to reach out on [Twitter](https://twitter.com/reidmit) or [LinkedIn](https://linkedin.com/in/reidmit).
