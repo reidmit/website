@@ -25,7 +25,7 @@ Pixers is powered by JavaScript and the HTML5 canvas. This project holds a speci
 
 I shared the link with friends and enjoyed seeing the drawings they made. For me, it was the first time that writing non-HTML code felt _fun_ and _creative_ – so unlike the C and Java that I was learning in my CS courses at the time. It opened my eyes to another side of programming.
 
-The code can be found [here](https://github.com/reid47/pixers). It is somewhat messy, but I have mostly resisted the urge to clean it up. I like that it reflects where I was at the time.
+The code can be found [here](https://github.com/reidmit/pixers). It is somewhat messy, but I have mostly resisted the urge to clean it up. I like that it reflects where I was at the time.
 
 Here are some more pixer-drawn images that I like:
 

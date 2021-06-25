@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ $.Site.Params.description }}" />
+    <meta name="author" content="{{ $.Site.Params.author }}" />
+    <meta
+      name="keywords"
+      content="software, engineer, film, filmmaker, portfolio, design, code, user experience, user interface, ux design, reidmit"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="{{ $.Site.Params.description }}" />
-  <meta name="author" content="{{ $.Site.Params.author }}" />
-  <meta name="keywords"
-    content="software, engineer, film, filmmaker, portfolio, design, code, user experience, user interface, ux design, reid47, reidmit" />
+    <title>
+      {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
+    </title>
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-  <title>
-    {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}
-  </title>
-  <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
-  <link rel="icon" type="image/png" href="/favicon.png" />
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 
-  {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `
-  <link rel="%s" type="%s" href="%s" title="%s" />
-  ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+    />
+    {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify
+    | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-  {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" />
-
-  {{ if (not .Site.IsServer) }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-110801155-1');
-  </script>
-  {{ end }}
-</head>
-
-<body>
-  <script>
-    var body = document.body, lightswitch;
-    var theme = localStorage.getItem('theme') || 'light';
-    body.className = theme;
-
-    function setLabel(theme) {
-      if (theme === 'dark') {
-        lightswitch.setAttribute('aria-label', 'Turn off dark mode');
-        lightswitch.classList.add('dark');
-      } else {
-        lightswitch.setAttribute('aria-label', 'Turn on dark mode');
-        lightswitch.classList.remove('dark');
+    {{ if (not .Site.IsServer) }}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }
+      gtag("js", new Date());
+      gtag("config", "UA-110801155-1");
+    </script>
+    {{ end }}
+  </head>
 
-    function toggleLights(evt) {
-      evt.preventDefault();
+  <body>
+    <script>
+      var body = document.body,
+        lightswitch;
+      var theme = localStorage.getItem("theme") || "light";
+      body.className = theme;
 
-      var nextTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-      body.className = nextTheme;
-      setLabel(nextTheme);
-      localStorage.setItem('theme', nextTheme);
-    }
+      function setLabel(theme) {
+        if (theme === "dark") {
+          lightswitch.setAttribute("aria-label", "Turn off dark mode");
+          lightswitch.classList.add("dark");
+        } else {
+          lightswitch.setAttribute("aria-label", "Turn on dark mode");
+          lightswitch.classList.remove("dark");
+        }
+      }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      lightswitch = lightswitch || document.getElementById('lightswitch');
-      lightswitch.addEventListener('click', toggleLights);
-      setLabel(theme);
-    })
-  </script>
+      function toggleLights(evt) {
+        evt.preventDefault();
 
-  <nav role="navigation" class="primary-nav">
-    <h1 class="site-title">
-      <a href="/">{{ .Site.Title }}</a>
-    </h1>
+        var nextTheme =
+          localStorage.getItem("theme") === "dark" ? "light" : "dark";
+        body.className = nextTheme;
+        setLabel(nextTheme);
+        localStorage.setItem("theme", nextTheme);
+      }
 
-    <div class="flex-spacer"></div>
+      document.addEventListener("DOMContentLoaded", function () {
+        lightswitch = lightswitch || document.getElementById("lightswitch");
+        lightswitch.addEventListener("click", toggleLights);
+        setLabel(theme);
+      });
+    </script>
 
-    <ul>
-      <li><a href="/projects/">projects</a></li>
-      <li><a href="/writing/">writing</a></li>
-      <li><a href="/about/">about</a></li>
-      <li><a href="#" id="lightswitch" role="button"></a></li>
-    </ul>
-  </nav>
+    <nav role="navigation" class="primary-nav">
+      <h1 class="site-title">
+        <a href="/">{{ .Site.Title }}</a>
+      </h1>
 
-  <div class="banner">
-    {{ block "banner" . }}{{ end }}
-  </div>
+      <div class="flex-spacer"></div>
 
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-</body>
+      <ul>
+        <li><a href="/projects/">projects</a></li>
+        <li><a href="/writing/">writing</a></li>
+        <li><a href="/about/">about</a></li>
+        <li><a href="#" id="lightswitch" role="button"></a></li>
+      </ul>
+    </nav>
 
+    <div class="banner">{{ block "banner" . }}{{ end }}</div>
+
+    <main>{{ block "main" . }}{{ end }}</main>
+  </body>
 </html>

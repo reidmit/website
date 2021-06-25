@@ -10,7 +10,7 @@ tags:
 
 I'm fascinated by the different technologies, languages, and methods people use to build websites. When I see a website I admire, I often spend time digging to see how it was built. So, I wanted to share the details behind how this site is made.
 
-There are tons of great options out there for this kind of thing, all with different strengths: [Wordpress](https://wordpress.org/), [Jekyll](https://jekyllrb.com/), [Hexo](https://hexo.io/), [Gatsby](https://gatsbyjs.org), to name just a few. I've spent far too much time debating which of these was right for me. At one point, I even had a version of my website written in [my own templating language](https://github.com/reid47/omelet).
+There are tons of great options out there for this kind of thing, all with different strengths: [Wordpress](https://wordpress.org/), [Jekyll](https://jekyllrb.com/), [Hexo](https://hexo.io/), [Gatsby](https://gatsbyjs.org), to name just a few. I've spent far too much time debating which of these was right for me. At one point, I even had a version of my website written in [my own templating language](https://github.com/reidmit/omelet).
 
 Eventually, I realized that in order to make a decision and stick with it, my choice would need to be based on some criteria beyond just what technology seemed cool to me at the moment. So here's what I came up with:
 
@@ -42,9 +42,9 @@ Recent versions of Hugo come with built-in support for [Sass](https://sass-lang.
 
 As is common with many static sites, I'm hosting this site using [GitHub Pages](https://pages.github.com/). This is super easy to set up if you're already familiar with GitHub, and it means my website is version-controlled (so I can always track the changes I make over time and go back to previous versions, if necessary!).
 
-My workflow now looks like this: When I need to make a change, I edit the files locally, commit the changes, and do `git push` to push my changes to GitHub. When I'm ready to publish the changes for all to see, I run a little [Bash script](https://github.com/reid47/website/blob/master/deploy.sh) I wrote to build the site and push all the changes to the `gh-pages` branch of the repository. This is where I've told GitHub to look for the files to power my GitHub Pages site.
+My workflow now looks like this: When I need to make a change, I edit the files locally, commit the changes, and do `git push` to push my changes to GitHub. When I'm ready to publish the changes for all to see, I run a little [Bash script](https://github.com/reidmit/website/blob/master/deploy.sh) I wrote to build the site and push all the changes to the `gh-pages` branch of the repository. This is where I've told GitHub to look for the files to power my GitHub Pages site.
 
-If you'd like to see what this looks like in practice, check out the [GitHub repo for this website](https://github.com/reid47/website). The raw text content lives in the `/content` directory, the HTML templates live in the `/layouts` directory, and the Sass stylesheets live in the `/assets` directory. Generated files live in the [`gh-pages` branch](https://github.com/reid47/website/tree/gh-pages).
+If you'd like to see what this looks like in practice, check out the [GitHub repo for this website](https://github.com/reidmit/website). The raw text content lives in the `/content` directory, the HTML templates live in the `/layouts` directory, and the Sass stylesheets live in the `/assets` directory. Generated files live in the [`gh-pages` branch](https://github.com/reidmit/website/tree/gh-pages).
 
 ## Conclusion
 
