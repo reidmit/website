@@ -1,0 +1,69 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software engineer, designer, and filmmaker based in San Francisco.">
+<meta name=author content="Reid Mitchell">
+<meta name=keywords content="software,engineer,film,filmmaker,portfolio,design,code,user experience,user interface,ux design,reidmit">
+<title>A2B | Reid Mitchell</title>
+<link rel=canonical href=https://reidmit.com/projects/a2b/>
+<link rel=icon type=image/png href=/favicon.png>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel=stylesheet>
+<link rel=stylesheet href=https://reidmit.com/main.min.080f23e29e88317a3ed7859fee0fe7b65ddd68c2e47e91c28bf47bdca5137556.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-110801155-1")</script>
+</head>
+<body>
+<script>var body=document.body,theme=localStorage.getItem("theme")||"light",lightswitch;body.className=theme;function setLabel(a){if(a==="dark"){const a="Turn off dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.add("dark")}else{const a="Turn on dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.remove("dark")}}function toggleLights(b){b.preventDefault();var a=localStorage.getItem("theme")==="dark"?"light":"dark";body.className=a,setLabel(a),localStorage.setItem("theme",a)}document.addEventListener("DOMContentLoaded",function(){lightswitch=lightswitch||document.getElementById("lightswitch"),lightswitch.addEventListener("click",toggleLights),setLabel(theme)})</script>
+<nav role=navigation class=primary-nav>
+<h1 class=site-title>
+<a href=/>Reid Mitchell</a>
+</h1>
+<div class=flex-spacer></div>
+<ul>
+<li><a href=# id=lightswitch role=button></a></li>
+</ul>
+</nav>
+<div class=banner></div>
+<main>
+<article>
+<header>
+<h1>A2B</h1>
+<small>
+<span class=article-date>September 2019</span>
+<nav class=article-tags aria-label=Tags>
+<a class="tag inline" href=/tags/app>app</a> <a class="tag inline" href=/tags/case-study>case study</a> <a class="tag inline" href=/tags/design>design</a> <a class="tag inline" href=/tags/ui>ui</a> <a class="tag inline" href=/tags/ux>ux</a>
+</nav>
+</small>
+</header>
+<p>With A2B, I designed the user experience and user interface for a travel app that would eliminate the frustrating or painful parts of travel planning. As the sole designer on the project, I did the research, prototyping, testing, and final wireframes over the course of three weeks.</p>
+<h2 id=the-idea>The idea</h2>
+<p>I started with a hypothesis. People love to dream of taking vacations. We have fun coming up with what these trips might look like: where we&rsquo;ll go, what we&rsquo;ll eat, what we&rsquo;ll do. But when we get the chance to actually take the trip, the planning and logistics can quickly suck the fun out of it.</p>
+<p>A2B tries to solve this problem. How might an app let someone focus 100% on the fun parts of planning, while taking care of the annoying parts instantly?</p>
+<h2 id=the-research>The research</h2>
+<p>To validate the hypothesis, I crafted a proto-persona that represented what I imagined the app&rsquo;s target user to be. She was aged 23, tech-savvy, and recently started working full-time. She had always dreamed of traveling the world, but never had the resources until now. She&rsquo;d like to use some of her newfound income and her vacation days to finally explore the world.</p>
+<p>I interviewed 5 people who roughly fit the demographic of my proto-persona, all based in San Francisco, and I sent a survey out via social media to collect a lot of data about people&rsquo;s travel planning habits. The questions generally focused on <strong>identifying which parts of travel planning are fun, and which parts were painful</strong>.</p>
+<p>The results were surprisingly consistent: When planning a trip, people loved to research things to do in their destinations (searching the internet, making must-see lists, asking others for recommendations, starting group chats with friends, etc). But the least-fun parts were all logistical: booking travel, figuring out how to get between places in their destination, and ensuring that they were scheduling their days efficiently. There was a general feeling that <strong>it is hard to make the most of a person&rsquo;s limited time in a new city</strong>.</p>
+<h2 id=the-persona>The persona</h2>
+<p>Based on these findings, I developed a final persona, named Angela, who was quite similar to my proto-persona. She was most interested in visiting European cities, especially Paris. The most notable difference from my proto-persona was her focus on traveling with friends. She often traveled in groups, and she had felt a lot of pain around making sure everyone in her group&rsquo;s preferences were honored when planning these trips.</p>
+<h2 id=wireframing--testing>Wireframing & testing</h2>
+<p>I set out to design a basic user flow that captured the core functionality of the app. It would let you create a new trip with a destination city, add sights to see and meals to eat, and then would <strong>automatically suggest an itinerary</strong>, based on your configured preferences. If you didn&rsquo;t like the suggested itinerary, you would &ldquo;shuffle&rdquo; it to get a new suggestion.</p>
+<p>The first round of designs were simple wireframe sketches. These screens covered all of the steps in that user flow, as well as some onboarding steps.</p>
+<p>After doing some usability testing with these, I built a set of low-fidelity digital wireframes in Adobe XD. I made these screens into a clickable prototype and did another round of usability testing.</p>
+<h2 id=final-prototype>Final prototype</h2>
+<p>In the end, I built my high-fidelity clickable prototype in Figma. I developed a simple style guide using Figma components to keep the design consistent, and I relied heavily on <a href=https://unsplash.com/>Unsplash</a> for free images.</p>
+<p><img src=/images/a2b-hifi.png alt="high-fidelity prototypes"></p>
+<h2 id=conclusions>Conclusions</h2>
+<p>The feedback I received on the final prototype was generally positive, but there are several pieces I&rsquo;d develop further in a future iteration. Specifically, I&rsquo;d like to think harder about the &ldquo;edit trip details&rdquo; workflow (not fully built-out in the prototype), and I&rsquo;d like to do another round of research focused on the itinerary generation feature: Is the &ldquo;Shuffle&rdquo; button clear? Is there a way to make it more useful?</p>
+</article>
+<footer>
+<a class=prev-link href=https://reidmit.com/projects/pivotal-ui/>
+<div>previous:</div>
+<b>Pivotal UI</b>
+</a>
+<div class=next-link></div>
+</footer>
+</main>
+</body>
+</html>

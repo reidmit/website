@@ -1,0 +1,60 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software engineer, designer, and filmmaker based in San Francisco.">
+<meta name=author content="Reid Mitchell">
+<meta name=keywords content="software,engineer,film,filmmaker,portfolio,design,code,user experience,user interface,ux design,reidmit">
+<title>Redraw | Reid Mitchell</title>
+<link rel=canonical href=https://reidmit.com/projects/redraw/>
+<link rel=icon type=image/png href=/favicon.png>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel=stylesheet>
+<link rel=stylesheet href=https://reidmit.com/main.min.080f23e29e88317a3ed7859fee0fe7b65ddd68c2e47e91c28bf47bdca5137556.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-110801155-1")</script>
+</head>
+<body>
+<script>var body=document.body,theme=localStorage.getItem("theme")||"light",lightswitch;body.className=theme;function setLabel(a){if(a==="dark"){const a="Turn off dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.add("dark")}else{const a="Turn on dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.remove("dark")}}function toggleLights(b){b.preventDefault();var a=localStorage.getItem("theme")==="dark"?"light":"dark";body.className=a,setLabel(a),localStorage.setItem("theme",a)}document.addEventListener("DOMContentLoaded",function(){lightswitch=lightswitch||document.getElementById("lightswitch"),lightswitch.addEventListener("click",toggleLights),setLabel(theme)})</script>
+<nav role=navigation class=primary-nav>
+<h1 class=site-title>
+<a href=/>Reid Mitchell</a>
+</h1>
+<div class=flex-spacer></div>
+<ul>
+<li><a href=# id=lightswitch role=button></a></li>
+</ul>
+</nav>
+<div class=banner></div>
+<main>
+<article>
+<header>
+<h1>Redraw</h1>
+<small>
+<span class=article-date>December 2017</span>
+<nav class=article-tags aria-label=Tags>
+<a class="tag inline" href=/tags/canvas>canvas</a> <a class="tag inline" href=/tags/javascript>javascript</a> <a class="tag inline" href=/tags/react>react</a>
+</nav>
+</small>
+</header>
+<p>Redraw is a tool for making pixel art. <a href=https://redraw.reidmit.com/>Try it out!</a></p>
+<p>The code is all <a href=https://github.com/reidmit/redraw>on GitHub</a>. It&rsquo;s written in React and uses the HTML5 canvas for drawing.</p>
+<p><img src=/images/redraw.png alt="screenshot of Redraw app"></p>
+<p>I started this project during a vacation at home. I was getting nostalgic for all the time I used to spend making drawings in MS Paint. I no longer have a Windows computer, so I went looking for a browser-based replacement. I found <a href=https://jspaint.app>JsPaint</a>, which is an amazing recreation of the old version of Paint that I loved. And I found <a href=https://make8bitart.com/>Make 8-Bit Art</a>, which is a pixel art tool like this one.</p>
+<p>After spending a bunch of time playing with and admiring these apps, I got the urge to build my own. I wanted to see how I could make React work with the <code>canvas</code> element. It was turning out well, so I kept adding features, and now it&rsquo;s a fairly polished little app!</p>
+<p>You can cut/copy/paste, undo/redo, zoom, save a selected part of your drawing, choose colors with the eyedropper tool, and more. Your canvas is saved in local storage, so you can pick up where you left off after refreshing or navigating away from the page. And you can save as either PNG or SVG. As a fun test, I drew all the icons you see on the buttons using the app itself.</p>
+<p><a href=https://redraw.reidmit.com/>Give it a shot</a>. I&rsquo;d love to see any drawings you make it with it!</p>
+</article>
+<footer>
+<a class=prev-link href=https://reidmit.com/projects/pixers/>
+<div>previous:</div>
+<b>Pixers</b>
+</a>
+<a class=next-link href=https://reidmit.com/projects/pivotal-ui/>
+<div>next:</div>
+<b>Pivotal UI</b>
+</a>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software engineer, designer, and filmmaker based in San Francisco.">
+<meta name=author content="Reid Mitchell">
+<meta name=keywords content="software,engineer,film,filmmaker,portfolio,design,code,user experience,user interface,ux design,reidmit">
+<title>Asyncronous coffee-making with JavaScript | Reid Mitchell</title>
+<link rel=canonical href=https://reidmit.com/writing/asynchronous-coffee-making-with-javascript/>
+<link rel=icon type=image/png href=/favicon.png>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel=stylesheet>
+<link rel=stylesheet href=https://reidmit.com/main.min.080f23e29e88317a3ed7859fee0fe7b65ddd68c2e47e91c28bf47bdca5137556.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-110801155-1")</script>
+</head>
+<body>
+<script>var body=document.body,theme=localStorage.getItem("theme")||"light",lightswitch;body.className=theme;function setLabel(a){if(a==="dark"){const a="Turn off dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.add("dark")}else{const a="Turn on dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.remove("dark")}}function toggleLights(b){b.preventDefault();var a=localStorage.getItem("theme")==="dark"?"light":"dark";body.className=a,setLabel(a),localStorage.setItem("theme",a)}document.addEventListener("DOMContentLoaded",function(){lightswitch=lightswitch||document.getElementById("lightswitch"),lightswitch.addEventListener("click",toggleLights),setLabel(theme)})</script>
+<nav role=navigation class=primary-nav>
+<h1 class=site-title>
+<a href=/>Reid Mitchell</a>
+</h1>
+<div class=flex-spacer></div>
+<ul>
+<li><a href=# id=lightswitch role=button></a></li>
+</ul>
+</nav>
+<div class=banner></div>
+<main>
+<article>
+<header>
+<h1>Asyncronous coffee-making with JavaScript</h1>
+<small>
+<span class=article-date>October 1, 2018</span>
+<nav class=article-tags aria-label=Tags>
+<a class="tag inline" href=/tags/javascript>javascript</a> <a class="tag inline" href=/tags/promises>promises</a>
+</nav>
+</small>
+</header>
+<p>Asynchronous programming comes up a lot when you hear about JavaScript. You may have heard about <strong>callbacks</strong>, <strong>promises</strong>, or <strong><code>async</code>/<code>await</code></strong>. These were things that took me a <em>long</em> time to grasp. Even well into writing JavaScript every day at my job, I wasn&rsquo;t fully comfortable with my understanding. In this post, I want to share how I&rsquo;ve learned to think about asynchronous programming: what it means, why it&rsquo;s useful, and how it&rsquo;s implemented in JavaScript.</p>
+<h2 id=defining-some-terms>Defining some terms</h2>
+<p>If you&rsquo;ve never heard the word &ldquo;asynchronous,&rdquo; that&rsquo;s okay, too! Let&rsquo;s start by defining its opposite, &ldquo;synchronous.&rdquo;</p>
+<p>A <strong>synchronous</strong> series of events is one that happens in a clearly defined order. Only one event ever happens at a time, and the next event does not start until the previous event has finished.</p>
+<p>In contrast, an <strong>asynchronous</strong> series of events may have multiple events occurring at the same time. Events can start while other events are still happening, and the order in which events complete is generally unpredictable.</p>
+<p>If these definitions don&rsquo;t make much sense yet, don&rsquo;t worry. These just give us a starting point. We will dig into them and provide some examples.</p>
+<h2 id=setting-the-scene>Setting the scene</h2>
+<p>Imagine a coffee shop on a busy Saturday. There&rsquo;s a line of people extending out the door, and there&rsquo;s only one barista working behind the counter. Let&rsquo;s call her Sarah. For each customer, Sarah has to do it all: take the order, make the coffee, and give it to the customer.</p>
+<p>In this scenario, the coffee shop is operating <strong>synchronously</strong>. There is exactly one thing happening at a time: whatever Sarah is doing! She cannot do multiple steps at the same time, since she&rsquo;s only one person.</p>
+<p>Let&rsquo;s break down the steps that go into serving each customer at this coffee shop:</p>
+<ol>
+<li>Take the customer&rsquo;s order</li>
+<li>Fill a cup based on the order</li>
+<li>Serve the cup to the customer</li>
+<li>If there&rsquo;s a problem with any of the above steps, apologize to the customer</li>
+</ol>
+<p>Now, let&rsquo;s try sketching this out in JavaScript:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>try</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>order</span> <span class=o>=</span> <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+    <span class=kr>const</span> <span class=nx>cup</span> <span class=o>=</span> <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>);</span>
+    <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>);</span>
+  <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>We have modeled this synchronous scenario as a simple <code>while</code> loop. While there are customers in the queue, take the first customer in the queue and go through each step for that customer. Sarah can only move on to the next customer when all steps have been completed for the current customer.</p>
+<p>For Sarah, this has the downside of being inefficient: she would love to be able to serve more customers and keep the line moving quickly, but she just can&rsquo;t!</p>
+<h2 id=getting-asynchronous>Getting asynchronous</h2>
+<p>Now, imagine that it&rsquo;s the following week. Sarah&rsquo;s manager realized how stressful last week was, and now there are four total baristas on duty to handle the crowd.</p>
+<p>Four baristas means that Sarah doesn&rsquo;t have to do everything herself. The steps required for each customer remain the same, but it&rsquo;s flexible who&rsquo;s doing each step and when. When a customer places an order, that customer can step aside and another customer can immediately place their order. In the meantime, other baristas are making and serving multiple orders at once.</p>
+<p>Now, this coffee shop is operating <strong>asynchronously</strong>. Some things don&rsquo;t change: the steps are the same. But the order in which customer interactions complete may change: if some customers are only asking for water, they may receive their drink quicker than a customer who wanted a cappucino.</p>
+<p>That last point is important: if a particular order is slow for some reason (maybe they wanted almond milk, which is kept in the back room), other orders are <strong>not blocked</strong> by it. Other baristas can continue working while one of them runs to the back room. In the synchronous example, the whole line would have to wait for Sarah to go get the almond milk for the person at the front.</p>
+<p>This is good news for Sarah, but it becomes a little trickier to model this scenario in JavaScript. Let&rsquo;s explore a few ways.</p>
+<h3 id=using-callbacks>Using callbacks</h3>
+<p>The original way to do asynchronous programming in JavaScript was using <strong>callbacks</strong>. This refers to the pattern of passing a function (the callback) as an argument to an asynchronous function. When the asynchronous function completes, it will call the callback function with the result.</p>
+<p>Here&rsquo;s what it looks like:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>order</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>,</span> <span class=nx>cup</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>);</span>
+    <span class=p>});</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><p>Previously, our <code>takeOrder</code> function received a <code>customer</code> as an argument and returned an <code>order</code>. This made sense when <code>takeOrder</code> was always performed by the same person, so we had to block the rest of the loop until <code>takeOrder</code> was done.</p>
+<p>But now, with multiple baristas, we know that <code>takeOrder</code> should not block the whole loop. We achieve that by moving the following steps into nested callback functions. Now, <code>takeOrder</code> does not actually return a value: instead, it passes its &ldquo;return value&rdquo; (the <code>order</code>) as an argument to its callback. The same applies for <code>fillCup</code>.</p>
+<p>By using asynchronous functions with callbacks, we can make sure that the sequence of events is still the same for each customer (<code>takeOrder</code>, then <code>fillCup</code>, then <code>serveCustomer</code>), but all the baristas can be busy working on orders at the same time.</p>
+<h3 id=using-callbacks-with-error-handling>Using callbacks with error handling</h3>
+<p>If you were looking closely, however, you may notice that the previous code was missing something that we had in the synchronous example: error handling. In synchronous code, this is simple to do with a <code>try</code>/<code>catch</code>. But with callbacks, it gets harder. For example, this <strong>will not work</strong>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>try</span> <span class=p>{</span>
+    <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>order</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>,</span> <span class=nx>cup</span> <span class=p>=&gt;</span> <span class=p>{</span>
+        <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>);</span>
+      <span class=p>});</span>
+    <span class=p>});</span>
+  <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>The reason this doesn&rsquo;t work is that, as we said, our asynchronous functions are non-blocking. The call to <code>takeOrder</code> returns instantly, well before all of the steps are really complete for this customer. The steps are all <strong>scheduled</strong> to be done asynchronously, at some point in the future, but not done yet. This means that if any of these scheduled steps throws an error, it will happen outside of our <code>try</code>, and it will escape our <code>catch</code>.</p>
+<p>So, how do we handle errors with callbacks if the functions are scheduled for some time in the future and cannot be caught? The most common pattern looks something like this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=p>(</span><span class=nx>error</span><span class=p>,</span> <span class=nx>order</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+      <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>
+      <span class=k>return</span><span class=p>;</span>
+    <span class=p>}</span>
+
+    <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>,</span> <span class=p>(</span><span class=nx>error</span><span class=p>,</span> <span class=nx>cup</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+      <span class=k>if</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+        <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>
+        <span class=k>return</span><span class=p>;</span>
+      <span class=p>}</span>
+
+      <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>);</span>
+    <span class=p>});</span>
+  <span class=p>});</span>
+<span class=p>}</span>
+</code></pre></div><p>Now, each callback function expects two arguments: an error from the previous step, and the &ldquo;return value&rdquo; from the previous step. If the error is defined, it means something went wrong, so we <code>apologizeToCustomer</code> and return early without calling the next function in the sequence.</p>
+<p>Just like asynchronous functions using callbacks <strong>do not return any values</strong>, they also <strong>do not throw any errors</strong>. Instead, they just pass these things into their callback function to be handled at the next step.</p>
+<p>But, as you may have noticed, this code looks quite a bit more complicated than what we had before. Lots of people in the JavaScript world felt this way, so they came up with another way to do asynchronous programming.</p>
+<h3 id=using-promises>Using promises</h3>
+<p>In JavaScript, a promise (or <code>Promise</code>, if you&rsquo;re referring to the built-in class) is a more elegant way of representing work that is scheduled to happen in the future.</p>
+<p>With callbacks, we saw that asynchronous functions did not return any values. In this new way of doing things, <strong>asynchronous functions return promises</strong>. Let&rsquo;s look at some code:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span>
+    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>order</span> <span class=p>=&gt;</span> <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>))</span>
+    <span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>cup</span> <span class=p>=&gt;</span> <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>))</span>
+    <span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=nx>error</span> <span class=p>=&gt;</span> <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>));</span>
+<span class=p>}</span>
+</code></pre></div><p>Here, <code>takeOrder</code> receives a <code>customer</code> as an argument, and returns a promise for an <code>order</code>. It doesn&rsquo;t return an <code>order</code> on its own, though, since the step does not complete immediately. Instead, we know that eventually the step will produce an <code>order</code> that we want to use at the next step.</p>
+<p>The returned promise is that &ldquo;eventual <code>order</code>.&rdquo; To use the <code>order</code>, we call the <code>then</code> method on the promise and pass in a function to handle the eventual <code>order</code>. The <code>then</code> method also returns a promise, so we can keep <strong>chaining</strong> functions together. This is how we model a value being passed between asynchronous steps <em>at some point in the future</em>. We don&rsquo;t really know when these functions are going to run, but we can control what they do when they receive the output from the previous step.</p>
+<p>Error handling becomes simpler with this concept of a &ldquo;promise chain.&rdquo; At the end of the chain, we can tack on a <code>catch</code> handler, which dictates what do to if an error is thrown by any of the previous functions in the chain.</p>
+<p>Since the chains of asynchronous work are scheduled for the future, the <code>while</code> loop gets through every customer without waiting for any of the orders to be complete. To return to our coffee shop, you can imagine if one barista stood at the counter and took <em>all the orders</em> extremely quickly, one after another, and let the orders pile up beside him. Eventually, the baristas will complete the stack of orders, but the &ldquo;loop&rdquo; has already finished.</p>
+<h3 id=using-asyncawait>Using <code>async</code>/<code>await</code></h3>
+<p>The JavaScript world moves quickly and is constantly improving. A few years after promises became popular, people wanted a new way to write promise-based code that didn&rsquo;t look so different from synchronous code.</p>
+<p>This is where the <code>async</code> and <code>await</code> keywords come into play. Callbacks and promises were just patterns that could be used in any old JavaScript, but <code>async</code> & <code>await</code> are new additions to the language syntax.</p>
+<p>Let&rsquo;s see what it looks like:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=k>while</span> <span class=p>(</span><span class=nx>queue</span><span class=p>.</span><span class=nx>length</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
+  <span class=kr>const</span> <span class=nx>customer</span> <span class=o>=</span> <span class=nx>queue</span><span class=p>.</span><span class=nx>shift</span><span class=p>();</span>
+  <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=kr>async</span> <span class=kd>function</span> <span class=nx>handleCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>)</span> <span class=p>{</span>
+  <span class=k>try</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>order</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>takeOrder</span><span class=p>(</span><span class=nx>customer</span><span class=p>);</span>
+    <span class=kr>const</span> <span class=nx>cup</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fillCup</span><span class=p>(</span><span class=nx>order</span><span class=p>);</span>
+    <span class=kr>await</span> <span class=nx>serveCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>cup</span><span class=p>);</span>
+  <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+    <span class=nx>apologizeToCustomer</span><span class=p>(</span><span class=nx>customer</span><span class=p>,</span> <span class=nx>error</span><span class=p>);</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>Here, our <code>handleCustomer</code> function is marked with the <code>async</code> keyword. This means that we can use <code>await</code> inside of it (and that it automatically returns a promise). Inside an <code>async</code> function, we can write code that looks mostly the same as it did in the synchronous world.</p>
+<p>However, when we make a call to a function that returns a promise, we can use <code>await</code> to &ldquo;unwrap&rdquo; the promise, and pull out the eventual value.</p>
+<p>When we use this syntax, we can also go back to using <code>try</code>/<code>catch</code> for error handling! The JavaScript interpreter will do the hard work of tracking all the scheduled asynchronous work, and we can just write code that looks familiar.</p>
+<h2 id=but-when-would-i-use-this>But when would I use this?</h2>
+<p>It&rsquo;s natural to wonder why any of this would be useful. Why introduce all this complexity to something that was originally so simple? It is definitely more complex, so we must be getting something in return.</p>
+<p>There are places where asynchronous programming makes a lot of sense. In our coffee shop example, it didn&rsquo;t make sense for Sarah to be the only one handling all of those customers, since it meant that every customer had to wait for Sarah to complete all the steps for all the customers before them in order to</p>
+<p>Likewise, <strong>we often don&rsquo;t want to block the execution of our code</strong> while we&rsquo;re waiting for some function to return. For example, on a page in a web app, we might make a request to an API to fetch the data for a graph. We don&rsquo;t know how long it will take for the request to finish, and we have more work to do. We have to render the rest of the page, maybe with an empty graph for now, and we want it to be interactive as soon as possible (so the page doesn&rsquo;t feel frozen). We want to say, &ldquo;fill in the graph whenever we get the data, but keep doing everything else in the meantime.&rdquo; Asynchronous programming lets us do that.</p>
+<p>This is especially important with things like network requests, since we can&rsquo;t be sure how long they will take: What if your internet connection is slow or flaky? Using asynchronous functions lets us schedule some work to be done whenever the request completes, but doesn&rsquo;t block the rest of our code on it.</p>
+<h2 id=in-conclusion>In conclusion</h2>
+<p>Asynchronous programming let us represent chains of scheduled future events. We can kick off a chain of events that does not block other events from happening, and we can have multiple chains of events executing simultaneously. This is hugely useful for keeping our code efficient.</p>
+<p>In JavaScript, we can do this sort of thing with callbacks, promises, or <code>async</code>/<code>await</code>, depending on our preferences and the libraries we&rsquo;re using.</p>
+<p>And in a busy coffee shop, we can do this by putting more baristas on duty and splitting up the work!</p>
+</article>
+<footer>
+<a class=prev-link href=https://reidmit.com/writing/wrapping-your-head-around-recursion/>
+<div>previous:</div>
+<b>Wrapping your head around recursion</b>
+</a>
+<div class=next-link></div>
+</footer>
+</main>
+</body>
+</html>

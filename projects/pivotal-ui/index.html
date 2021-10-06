@@ -1,0 +1,69 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software engineer, designer, and filmmaker based in San Francisco.">
+<meta name=author content="Reid Mitchell">
+<meta name=keywords content="software,engineer,film,filmmaker,portfolio,design,code,user experience,user interface,ux design,reidmit">
+<title>Pivotal UI | Reid Mitchell</title>
+<link rel=canonical href=https://reidmit.com/projects/pivotal-ui/>
+<link rel=icon type=image/png href=/favicon.png>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel=stylesheet>
+<link rel=stylesheet href=https://reidmit.com/main.min.080f23e29e88317a3ed7859fee0fe7b65ddd68c2e47e91c28bf47bdca5137556.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-110801155-1")</script>
+</head>
+<body>
+<script>var body=document.body,theme=localStorage.getItem("theme")||"light",lightswitch;body.className=theme;function setLabel(a){if(a==="dark"){const a="Turn off dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.add("dark")}else{const a="Turn on dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.remove("dark")}}function toggleLights(b){b.preventDefault();var a=localStorage.getItem("theme")==="dark"?"light":"dark";body.className=a,setLabel(a),localStorage.setItem("theme",a)}document.addEventListener("DOMContentLoaded",function(){lightswitch=lightswitch||document.getElementById("lightswitch"),lightswitch.addEventListener("click",toggleLights),setLabel(theme)})</script>
+<nav role=navigation class=primary-nav>
+<h1 class=site-title>
+<a href=/>Reid Mitchell</a>
+</h1>
+<div class=flex-spacer></div>
+<ul>
+<li><a href=# id=lightswitch role=button></a></li>
+</ul>
+</nav>
+<div class=banner></div>
+<main>
+<article>
+<header>
+<h1>Pivotal UI</h1>
+<small>
+<span class=article-date>April 2019</span>
+<nav class=article-tags aria-label=Tags>
+<a class="tag inline" href=/tags/css>css</a> <a class="tag inline" href=/tags/design-systems>design systems</a> <a class="tag inline" href=/tags/react>react</a>
+</nav>
+</small>
+</header>
+<p>For the first year and a half of my job at Pivotal, I worked on the team that maintained Pivotal UI, the company&rsquo;s design system and component library.</p>
+<p>The library is open source, written in React and CSS, and can be found <a href=https://github.com/pivotal-cf/pivotal-ui>on GitHub</a>. The documentation, plus examples of the components in use, can be found in our <a href=https://styleguide.pivotal.io/>style guide</a>.</p>
+<p>This was such a fun project to work on, and I cannot overstate how much I learned.</p>
+<p><img src=/images/pivotal-ui.png alt="screenshot Pivotal UI style guide"></p>
+<h2 id=learning-to-build-and-use-a-design-system>Learning to build and use a design system</h2>
+<p>Prior to joining Pivotal, I had done a lot of front-end web development in HTML and CSS, but I had never worked with React.</p>
+<p>On this team, I got to hit the ground running as both an author and a consumer of our library (since my team also maintained a React app that used the design system). I learned what design systems are, why they&rsquo;re useful, and how hard it can be to drive usage and consistency across lots of teams with different requirements and priorities.</p>
+<p>I got to work with other teams that were building UIs to help them use our components and to figure out how to improve the library to better meet their needs.</p>
+<p>I got to explore how to write content in a way that was detailed enough to be useful without being overly verbose or hard to understand.</p>
+<p>Perhaps most importantly, I got to think hard about <strong>interfaces</strong>, not just in terms of UIs, but in terms of what the library was allowing and disallowing its consumers to do: <em>What props should this component take? Should this component be exported? To what extent should our default styles be overridable? When do we build a new library component for a team&rsquo;s use case rather than ask them to build it themselves in their codebase?</em></p>
+<p>These kinds of questions are applicable in so many contexts, at so many levels of abstraction, and I continue to grapple with them on a daily basis.</p>
+<h2 id=redesigning-the-style-guide>Redesigning the style guide</h2>
+<p>The style guide, the primary documentation for the library, is another React app. We hoped other teams would go there first to get their questions answered, and we were constantly looking for feedback and iterating to improve it. Plus, it was sort of the public face of Pivotal UI, so we wanted to make it look good!</p>
+<p>During my time on the team, we redesigned and rebuilt the style guide several times. You can check out <a href=https://styleguide.pivotal.io/about/versions/>some old versions</a>, if you&rsquo;re curious.</p>
+<p>The current version uses <a href=https://gatsbyjs.org>Gatsby</a>, a React framework which allowed us to cut down considerably on custom <a href=https://webpack.js.org/>webpack</a> configuration and focus more on the content and the design. It also gave us lots of performance improvements (almost) for free via build-time static rendering and code splitting. Try comparing the load times of the oldest version and the current version – the difference is very noticeable!</p>
+<p>Although I have now moved on to another team, meaning my priorities are mostly elsewhere, I&rsquo;m still following the project closely. I&rsquo;m excited to see where it goes next!</p>
+</article>
+<footer>
+<a class=prev-link href=https://reidmit.com/projects/redraw/>
+<div>previous:</div>
+<b>Redraw</b>
+</a>
+<a class=next-link href=https://reidmit.com/projects/a2b/>
+<div>next:</div>
+<b>A2B</b>
+</a>
+</footer>
+</main>
+</body>
+</html>

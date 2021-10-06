@@ -1,0 +1,71 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Software engineer, designer, and filmmaker based in San Francisco.">
+<meta name=author content="Reid Mitchell">
+<meta name=keywords content="software,engineer,film,filmmaker,portfolio,design,code,user experience,user interface,ux design,reidmit">
+<title>Pixers | Reid Mitchell</title>
+<link rel=canonical href=https://reidmit.com/projects/pixers/>
+<link rel=icon type=image/png href=/favicon.png>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel=stylesheet>
+<link rel=stylesheet href=https://reidmit.com/main.min.080f23e29e88317a3ed7859fee0fe7b65ddd68c2e47e91c28bf47bdca5137556.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110801155-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-110801155-1")</script>
+</head>
+<body>
+<script>var body=document.body,theme=localStorage.getItem("theme")||"light",lightswitch;body.className=theme;function setLabel(a){if(a==="dark"){const a="Turn off dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.add("dark")}else{const a="Turn on dark mode";lightswitch.setAttribute("aria-label",a),lightswitch.setAttribute("title",a),lightswitch.classList.remove("dark")}}function toggleLights(b){b.preventDefault();var a=localStorage.getItem("theme")==="dark"?"light":"dark";body.className=a,setLabel(a),localStorage.setItem("theme",a)}document.addEventListener("DOMContentLoaded",function(){lightswitch=lightswitch||document.getElementById("lightswitch"),lightswitch.addEventListener("click",toggleLights),setLabel(theme)})</script>
+<nav role=navigation class=primary-nav>
+<h1 class=site-title>
+<a href=/>Reid Mitchell</a>
+</h1>
+<div class=flex-spacer></div>
+<ul>
+<li><a href=# id=lightswitch role=button></a></li>
+</ul>
+</nav>
+<div class=banner>
+</div>
+<main>
+<article>
+<header>
+<h1>Pixers</h1>
+<small>
+<span class=article-date>January 2015</span>
+<nav class=article-tags aria-label=Tags>
+<a class="tag inline" href=/tags/canvas>canvas</a> <a class="tag inline" href=/tags/generative-art>generative art</a> <a class="tag inline" href=/tags/javascript>javascript</a>
+</nav>
+</small>
+</header>
+<p>Pixers is a tool for creating <a href=https://en.wikipedia.org/wiki/Generative_art>generative art</a>, pixel-by-pixel. You define a few parameters (color palette, number of pixers, etc.) and let the pixers draw you a picture. Even when using the same settings, no two pixer drawings are alike. <a href=https://pixers.reidmit.com/>Try it out!</a></p>
+<p>Here&rsquo;s how I described it when I first made it:</p>
+<blockquote>
+<p>Pixers are tiny (1px by 1px) creatures. They move completely randomly. To start, each pixer is randomly assigned a color from the chosen color palette.</p>
+</blockquote>
+<blockquote>
+<p>When a pixer passes over a blank pixel, the pixel takes on the pixer’s color. When a pixer passes over a colored pixel, the color of the pixel and the color of the pixer are averaged. Both pixel and pixer take on this average color. The pixel remains, but the pixer keeps moving, blending colors together.</p>
+</blockquote>
+<p>By following those simple rules, pixers come together to make really beautiful, unique pieces:</p>
+<p><img src=/pixers/pixers1.png alt="a pixer-generated drawing"></p>
+<p>Pixers is powered by JavaScript and the HTML5 canvas. This project holds a special place in my heart because it was my first substantial JavaScript project. Before this, I had messed around with jQuery a little bit, but I had never done anything this complex. But I had this idea, tackled it, and produced something that was a lot of fun to play with (and still is!).</p>
+<p>I shared the link with friends and enjoyed seeing the drawings they made. For me, it was the first time that writing non-HTML code felt <em>fun</em> and <em>creative</em> – so unlike the C and Java that I was learning in my CS courses at the time. It opened my eyes to another side of programming.</p>
+<p>The code can be found <a href=https://github.com/reidmit/pixers>here</a>. It is somewhat messy, but I have mostly resisted the urge to clean it up. I like that it reflects where I was at the time.</p>
+<p>Here are some more pixer-drawn images that I like:</p>
+<p><img src=/pixers/pixers2.png alt="another pixer-generated drawing"></p>
+<p><img src=/pixers/pixers3.png alt="yet another pixer-generated drawing"></p>
+<p><img src=/pixers/pixers4.png alt="yet another pixer-generated drawing"></p>
+</article>
+<footer>
+<a class=prev-link href=https://reidmit.com/projects/hashtag-lonely/>
+<div>previous:</div>
+<b>Hashtag Lonely</b>
+</a>
+<a class=next-link href=https://reidmit.com/projects/redraw/>
+<div>next:</div>
+<b>Redraw</b>
+</a>
+</footer>
+</main>
+</body>
+</html>
